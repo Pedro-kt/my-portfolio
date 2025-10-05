@@ -1,0 +1,45 @@
+<section id="contact" class="contact-section fade-in-section">
+  <h2>Contacto</h2>
+  <p>Si querés colaborar, hacer una consulta o simplemente saludar, enviame un mensaje!</p>
+
+  <form action="https://formspree.io/f/xyznpdrg" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Tu nombre" required />
+    <input type="email" name="email" placeholder="Tu correo" required />
+    <textarea name="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+    <button type="submit" class="submit-btn">Enviar</button>
+  </form>
+
+  <div class="contact-buttons">
+  <a href="https://github.com/Pedro-kt" target="_blank" class="contact-btn">
+    <img src="/images/icons/github.svg" alt="GitHub" />
+    GitHub
+  </a>
+  <a href="https://www.linkedin.com/in/pedro-bustamante-12016a334" target="_blank" class="contact-btn">
+    <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+    LinkedIn
+  </a>
+</div>
+
+</section>
+
+
+<script>
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    alert('¡Gracias! Tu mensaje fue enviado.');
+    form.reset();
+  } else {
+    alert('Hubo un error, intenta nuevamente.');
+  }
+});
+</script>

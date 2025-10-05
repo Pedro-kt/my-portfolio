@@ -1,0 +1,138 @@
+<section id="projects" class="projects-section fade-in-section">
+  <h2>Proyectos</h2>
+
+  <div class="projects-grid">
+    <!-- SeijakuList destacado -->
+    <div class="project-card featured">
+  <div class="project-content">
+    <div class="project-icon">
+      <img src="/images/projects/seijaku_list/seijaku.png" alt="SeijakuList" />
+    </div>
+
+    <div class="project-info">
+      <h3>SeijakuList</h3>
+      <span class="project-status">En desarrollo</span>
+      <p>
+        Aplicación siendo desarrollada en Kotlin y Jetpack Compose, enfocada en permitir a los usuarios gestionar su historial de animes con varios estados y descubrir nuevos títulos a través de la integración con la Jikan REST API (MyAnimeList wrapper).
+
+La aplicación implementa MVVM, y Clean Arquitecture. Room (ORM) para persistencia de los animes agregados, junto con Coroutines para operaciones asíncronas, y Retrofit para la comunicación con la API.
+Ademas de disponer de themas Dark - Night, siguiendo las buenas prácticas de Material
+
+      </p>
+
+<div class="tech-stack">
+        <img src="/images/tech/kotlin.svg" alt="Kotlin" title="Kotlin" />
+        <img src="/images/tech/jetpack-compose.svg" alt="Jetpack Compose" title="Jetpack Compose" />
+        <img src="/images/tech/firebase.svg" alt="Firebase" title="Firebase" />
+        <img src="/images/tech/SQLite.svg" alt="SQLite" title="SQLite" />
+        <img src="/images/tech/jikan.png" alt="Jikan" title="Jikan API RESTful" />
+        <img src="/images/tech/git.svg" alt="Git" title="Git" />
+        <img src="/images/tech/android-studio.svg" alt="Android Studio" title="Android Studio" />
+      </div>
+
+<p>Stack utilizado:</p>
+
+<div class="tech-badges">
+  <span class="badge">Kotlin</span>
+  <span class="badge">Jetpack Compose</span>
+  <span class="badge">MVVM</span>
+  <span class="badge">Room</span>
+  <span class="badge">Retrofit</span>
+  <span class="badge">Coroutines</span>
+  <span class="badge">Hilt</span>
+  <span class="badge">Navigation Compose</span>
+  <span class="badge">Gson</span>
+  <span class="badge">Jikan API</span>
+  <span class="badge">Coil</span>
+</div>
+
+      <div class="project-buttons">
+  <a href="https://github.com/Pedro-kt/seijaku-list" class="project-button github">
+    <img src="/images/icons/github.svg" alt="" width="18" height="18" />
+    GitHub
+  </a>
+  <a href="#" class="project-button playstore disabled">
+    <img src="/images/icons/google-play.svg" alt="" width="18" height="18" />
+    Play Store
+  </a>
+  <a href="#" class="project-button youtube">
+    <img src="/images/icons/youtube.svg" alt="" width="18" height="18" />
+    Video Demo
+  </a>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+    <div id="modal-seijakulist" class="project-modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal('seijakulist')">&times;</span>
+
+    <h3>SeijakuList - Detalles</h3>
+
+    <p>Descripción extendida:</p>
+    <p>
+      SeijakuList es una app de seguimiento de animes y mangas que permite llevar registro
+      de tus series y mangas vistos, organizar listas personales, y obtener logros por progreso.
+      Integra Jikan API para información en tiempo real y Firebase para gestión de usuarios y datos en la nube.
+    </p>
+
+    <p>Stack completo utilizado:</p>
+    <ul>
+      <li>Lenguaje: Kotlin</li>
+      <li>UI: Jetpack Compose</li>
+      <li>Arquitectura: MVVM + StateFlow</li>
+      <li>Persistencia local: Room (ORM sobre SQLite)</li>
+      <li>Inyeccion de dependencias: Hilt</li>
+      <li>Navegacion: Navigation Compose</li>
+      <li>Asincronía: Kotlin Coroutines + Flow</li>
+      <li>Red: Retrofit + Gson (consumo de APIs)</li>
+      <li>Carga de Imágenes: Coil</li>
+      <li>Backend: Firebase (Auth + Firestore + Storage + Crashlytics) partes en desarrollo e integracion</li>
+      <li>IDE: Android Studio</li>
+      <li>Control de versiones: Git</li>
+    </ul>
+
+    <p>Screenshots:</p>
+    <div class="screenshots">
+      <img src="/images/projects/seijaku_list/seijaku-home.png" alt="Screenshot 1" />
+      <img src="/images/projects/seijaku_list/seijaku-detail-anime.png" alt="Screenshot 2" />
+      <img src="/images/projects/seijaku_list/seijaku-search.png" alt="Screenshot 3" />  
+      <img src="/images/projects/seijaku_list/seijaku-my-animes.png" alt="Screenshot 4" />     
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+</section>
+
+<script is:client>
+function openModal(id) {
+  const modal = document.getElementById('modal-' + id);
+  modal.style.display = 'flex';
+
+  // Cerrar al hacer click fuera del contenido
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) { // solo si clickeas el fondo
+      closeModal(id);
+    }
+  });
+}
+
+function closeModal(id) {
+  document.getElementById('modal-' + id).style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    const modal = document.getElementById('modal-seijakulist');
+    if (modal.style.display === 'flex') {
+      modal.style.display = 'none';
+    }
+  }
+});
+
+</script>

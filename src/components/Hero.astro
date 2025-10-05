@@ -1,0 +1,68 @@
+<section id="hero-about">
+  <div class="hero-about-container">
+    <!-- Hero -->
+    <div class="hero">
+      <img src="/images/perfil.jpeg" alt="Pedro" class="hero-photo" />
+      <h1 class="hero-name"></h1>
+      <p>Desarrollador Android Junior</p>
+      <p class="location">📍 Posadas, Misiones, Argentina</p>
+
+ <div class="hero-buttons">
+  <a href="https://github.com/Pedro-kt" target="_blank" class="btn-link">
+    <img src="/images/icons/github.svg" alt="GitHub" />
+    GitHub
+  </a>
+  <a href="https://www.linkedin.com/in/pedro-bustamante-12016a334" target="_blank" class="btn-link">
+    <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+    LinkedIn
+  </a>
+  <a href="/cv/PedroBustamanteCV.pdf" download class="btn-link cv">
+    <img src="/images/icons/download.svg" alt="CV" />
+    Descargar CV
+  </a>
+</div>
+
+
+    </div>
+
+    <!-- About Me -->
+    <div class="about">
+      <h2>Sobre Mi</h2>
+        <p>
+        Soy estudiante de la Tecnicatura Superior en Desarrollo de Software y me desenvuelvo como desarrollador Android.
+        Apasionado por crear aplicaciones móviles funcionales y atractivas.
+        </p>
+        <p>
+        Me destaco por aprender de manera autónoma, resolver problemas y aplicar buenas prácticas
+        mientras construyo proyectos funcionales y escalables.
+        </p>
+        <p>
+        Actualmente estoy en búsqueda de mi primera oportunidad laboral como desarrollador Android, donde pueda aportar mis conocimientos y seguir creciendo profesionalmente.
+        Me interesa colaborar en equipos dinámicos, enfrentar desafíos técnicos y contribuir al desarrollo de aplicaciones de alta calidad.
+        </p>
+        <p>
+        Entre mis fortalezas destacan, la integración de APIs RESTful, el trabajo con bases de datos, implementación de interfaces modernas y la capacidad de adaptación a nuevas tecnologías y frameworks.
+        Además, valoro la comunicación efectiva y el trabajo en equipo para alcanzar objetivos comunes.
+        </p>
+    </div>
+  </div>
+</section>
+
+<script>
+const heroName = "Hola!, soy Pedro Bustamante";
+const heroElement = document.querySelector(".hero-name");
+let i = 0;
+
+function typeWriter() {
+  if (i < heroName.length) {
+    heroElement.innerHTML += heroName.charAt(i);
+    i++;
+    setTimeout(typeWriter, 100);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  heroElement.style.opacity = 1; // fade in
+  typeWriter();
+});
+</script>
