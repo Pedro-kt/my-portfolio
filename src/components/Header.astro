@@ -1,14 +1,43 @@
 <header>
-  <h1>
-    Pedro.dev
-    <img src="/images/icons/android.svg" alt="Android" class="logo-android" />
-  </h1>
-  <nav>
-    <ul>
-      <li><a href="#hero-about">Inicio</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#education">Formación</a></li>
-      <li><a href="#contact">Contáctame</a></li>
-    </ul>
-  </nav>
+    <h1>
+        Pedro.dev
+        <img src="/images/icons/android.svg" alt="Android" class="logo-android" />
+    </h1>
+
+    <button class="menu-toggle">
+        ☰ 
+    </button> 
+
+    <nav class="menu-mobile-hidden">
+        <ul>
+            <li><a href="#hero-about">Inicio</a></li>
+            <li><a href="#tech-stack">Stack Tecnológico</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#education">Formación</a></li>
+            <li><a href="#contact">Contácto</a></li>
+        </ul>
+    </nav>
 </header>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+
+    menuToggle.addEventListener('click', () => {
+        // Esta línea añade o quita la clase 'open' del NAV
+        nav.classList.toggle('open'); 
+    });
+    
+    // Opcional: Cerrar el menú si se hace clic en un enlace (navegación interna)
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (nav.classList.contains('open')) {
+                nav.classList.remove('open');
+            }
+        });
+    });
+});
+
+</script>
