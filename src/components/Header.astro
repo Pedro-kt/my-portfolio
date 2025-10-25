@@ -1,43 +1,96 @@
-<header>
-    <h1>
-        Pedro.dev
-        <img src="/images/icons/android.svg" alt="Android" class="logo-android" />
-    </h1>
+<header class="fixed top-0 w-full bg-slate-950/70 backdrop-blur-xl border-b border-white/10 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="flex items-center gap-3 text-2xl md:text-3xl font-bold">
+            <span cclass="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Pedro.dev
+            </span>
+            <img src="/images/icons/android.svg" alt="Android" class="w-7 h-7 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+        </h1>
 
-    <button class="menu-toggle">
-        ☰ 
-    </button> 
+        <button class="menu-toggle md:hidden text-3xl text-white bg-transparent border-none cursor-pointer p-0 leading-none hover:text-cyan-400 transition-colors">
+            ☰ 
+        </button> 
 
-    <nav class="menu-mobile-hidden">
-        <ul>
-            <li><a href="#hero-about">Inicio</a></li>
-            <li><a href="#tech-stack">Stack Tecnológico</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#education">Formación</a></li>
-            <li><a href="#contact">Contácto</a></li>
-        </ul>
-    </nav>
+        <nav class="hidden md:block">
+            <ul class="flex gap-8 list-none">
+                <li><a href="#hero-about" class="text-slate-300 no-underline transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] relative group">
+                    Inicio
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="#tech-stack" class="text-slate-300 no-underline transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] relative group">
+                    Stack
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="#projects" class="text-slate-300 no-underline transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] relative group">
+                    Proyectos
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="#education" class="text-slate-300 no-underline transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] relative group">
+                    Formación
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="#contact" class="text-slate-300 no-underline transition-all duration-300 hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] relative group">
+                    Contacto
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <script>
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('header nav');
 
-    menuToggle.addEventListener('click', () => {
-        // Esta línea añade o quita la clase 'open' del NAV
-        nav.classList.toggle('open'); 
+    menuToggle?.addEventListener('click', () => {
+        nav?.classList.toggle('open-mobile');
     });
     
-    // Opcional: Cerrar el menú si se hace clic en un enlace (navegación interna)
-    nav.querySelectorAll('a').forEach(link => {
+    nav?.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            if (nav.classList.contains('open')) {
-                nav.classList.remove('open');
+            if (nav.classList.contains('open-mobile')) {
+                nav.classList.remove('open-mobile');
             }
         });
     });
 });
-
 </script>
+
+<style>
+@media screen and (max-width: 768px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(2, 6, 23, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header nav.open-mobile {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav ul li {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    header nav ul li a {
+        padding: 1.2rem 2rem;
+        display: block;
+        font-size: 1.1rem;
+    }
+}
+</style>

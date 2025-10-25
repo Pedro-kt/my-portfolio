@@ -1,20 +1,26 @@
-<section id="education">
-  <h2>Formación</h2>
-  <p class="intro">Mi formación académica y habilidades adquiridas hasta el momento.</p>
+<section id="education" class="py-24 px-6 bg-slate-950">
+  <div class="text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+      Formación
+    </h2>
+    <p class="text-[#aaaaaa] mb-12">
+      Mi formación académica y habilidades adquiridas hasta el momento.
+    </p>
+  </div>
 
-  <div class="education-container">
-    <!-- Formación formal -->
-    <div class="education-card">
-      <h3>Tecnicatura Superior en Desarrollo de Software</h3>
-      <span class="year">Instituto Superior Roque Gonzalez | 2024 - 2026</span>
-      <p class="description">
+  <div class="flex gap-8 justify-center flex-wrap">
+
+    <div class="bg-gradient-to-tr from-slate-800/80 to-slate-900/80 rounded-2xl p-8 md:p-6 w-full md:w-[45%] min-w-[300px] text-left transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/20 border border-white/10 backdrop-blur-sm">
+      <h3 class="text-2xl mb-2 text-white font-semibold">Tecnicatura Superior en Desarrollo de Software</h3>
+      <span class="text-sm text-[#aaaaaa] mb-4 block">Instituto Superior Roque Gonzalez | 2024 - 2026</span>
+      <p class="mb-4 leading-relaxed text-[#cccccc]">
         A lo largo de la carrera aprendí desarrollo de software, bases de datos, POO, lógica y estructuras de datos,  
         metodologías ágiles y Scrum, y trabajé en equipo colaborando en proyectos con mis compañeros.
       </p>
-      <ul class="skills-list">
+      <ul class="list-disc pl-5 text-[#cccccc] space-y-2">
         <li>Programación Orientada a Objetos</li>
         <li>Bases de datos y SQL</li>
-        <li>Analisis y diseño de sistemas</li>
+        <li>Análisis y diseño de sistemas</li>
         <li>Sistemas operativos</li>
         <li>Ciclo de vida del desarrollo de software</li>
         <li>Desarrollo de sistemas</li>
@@ -24,15 +30,14 @@
       </ul>
     </div>
 
-    <!-- Aprendizaje autodidacta -->
-    <div class="education-card">
-      <h3>Desarrollo Android</h3>
-      <span class="year">Autodidacta | 2024 - Actualidad</span>
-      <p class="description">
+    <div class="bg-gradient-to-tr from-slate-800/80 to-slate-900/80 rounded-2xl p-8 md:p-6 w-full md:w-[45%] min-w-[300px] text-left transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20 border border-white/10 backdrop-blur-sm">
+      <h3 class="text-2xl mb-2 text-white font-semibold">Desarrollo Android</h3>
+      <span class="text-sm text-[#aaaaaa] mb-4 block">Autodidacta | 2024 - Actualidad</span>
+      <p class="mb-4 leading-relaxed text-[#cccccc]">
         Aprendí de manera autodidacta desarrollo Android moderno usando Kotlin, Jetpack Compose y librerías modernas actuales.  
         Construí proyectos funcionales, integrando Firebase, APIs externas y siguiendo buenas prácticas.
       </p>
-      <ul class="skills-list">
+      <ul class="list-disc pl-5 text-[#cccccc] space-y-2">
         <li>Kotlin y Jetpack Compose</li>
         <li>Firebase (Auth, DB, Hosting)</li>
         <li>Integración con APIs RESTful</li>
@@ -45,3 +50,22 @@
     </div>
   </div>
 </section>
+
+<style>
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  #education .flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #education > div > div {
+    width: 100% !important;
+  }
+}
+
+/* Mejor transición de hover */
+#education div:hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+</style>

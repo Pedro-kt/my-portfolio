@@ -1,129 +1,166 @@
-<section id="tech-stack">
-    <h2>Stack Tecnológico</h2>
-    <p class="intro">
-        Tecnologías y herramientas que utilizo en mis proyectos de desarrollo Android.
+<section id="tech-stack" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+      Stack Tecnológico
+    </h2>
+    <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-12">
+      Tecnologías y herramientas que utilizo en mis proyectos de desarrollo Android.
     </p>
 
-    <div class="tech-grid">
-        <div class="tech-card">
-            <img src="/images/tech/kotlin.svg" alt="Kotlin" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Kotlin</span>
-                <span class="tech-desc">Lenguaje oficial y principal para el desarrollo de apps Android moderno.</span>
-            </div>
+    <!-- Grid de tecnologías -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Kotlin -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)] hover:border-cyan-500/30">
+        <img src="/images/tech/kotlin.svg" alt="Kotlin" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Kotlin</h3>
+          <p class="text-slate-400 text-sm leading-tight">Lenguaje oficial y principal para el desarrollo de apps Android moderno.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/jetpack-compose.svg" alt="Jetpack Compose" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Jetpack Compose</span>
-                <span class="tech-desc">Toolkit declarativo de UI para crear interfaces nativas con menos código.</span>
-            </div>
+      <!-- Jetpack Compose -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)] hover:border-purple-500/30">
+        <img src="/images/tech/jetpack-compose.svg" alt="Jetpack Compose" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Jetpack Compose</h3>
+          <p class="text-slate-400 text-sm leading-tight">Toolkit declarativo de UI para crear interfaces nativas con menos código.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/java.svg" alt="Java" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Java</span>
-                <span class="tech-desc">Lenguaje de programación orientado a objetos (POO) con interoperabilidad con Kotlin.</span>
-            </div>
+      <!-- Java -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/java.svg" alt="Java" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Java</h3>
+          <p class="text-slate-400 text-sm leading-tight">Lenguaje de programación orientado a objetos (POO) con interoperabilidad con Kotlin.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/firebase.svg" alt="Firebase" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Firebase</span>
-                <span class="tech-desc">Plataforma Backend-as-a-Service (BaaS) para autenticación, cloud firestore, storage y analíticas.</span>
-            </div>
+      <!-- Firebase -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/firebase.svg" alt="Firebase" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Firebase</h3>
+          <p class="text-slate-400 text-sm leading-tight">Plataforma BaaS para autenticación, Firestore, Storage y analíticas.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/SQLite.svg" alt="SQLite" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">SQLite</span>
-                <span class="tech-desc">Motor de base de datos relacional ligero utilizado para persistencia local.</span>
-            </div>
+      <!-- SQLite -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/SQLite.svg" alt="SQLite" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">SQLite</h3>
+          <p class="text-slate-400 text-sm leading-tight">Motor de base de datos relacional ligero para persistencia local.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/git.svg" alt="Git" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Git</span>
-                <span class="tech-desc">Sistema de control de versiones distribuido para el seguimiento y gestión del código.</span>
-            </div>
+      <!-- Git -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/git.svg" alt="Git" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Git</h3>
+          <p class="text-slate-400 text-sm leading-tight">Sistema de control de versiones distribuido para seguimiento y gestión del código.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/android-studio.svg" alt="Android Studio" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Android Studio</span>
-                <span class="tech-desc">Entorno de Desarrollo Integrado (IDE) oficial basado en IntelliJ IDEA.</span>
-            </div>
+      <!-- Android Studio -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/android-studio.svg" alt="Android Studio" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Android Studio</h3>
+          <p class="text-slate-400 text-sm leading-tight">IDE oficial basado en IntelliJ IDEA, optimizado para Android.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/mvvm.png" alt="MVVM" class="tech-logo" /> 
-            <div class="tech-info">
-                <span class="tech-name">MVVM</span>
-                <span class="tech-desc">Patrón de arquitectura (Model-View-ViewModel) para separar la lógica de la UI.</span>
-            </div>
+      <!-- MVVM -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/mvvm.png" alt="MVVM" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">MVVM</h3>
+          <p class="text-slate-400 text-sm leading-tight">Patrón arquitectura (Model-View-ViewModel) para separar lógica y UI.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/room.svg" alt="Room" class="tech-logo" /> 
-            <div class="tech-info">
-                <span class="tech-name">Room</span>
-                <span class="tech-desc">Capa de persistencia (ORM) que facilita la interacción con SQLite.</span>
-            </div>
+      <!-- Room -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/room.svg" alt="Room" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Room</h3>
+          <p class="text-slate-400 text-sm leading-tight">Capa de persistencia (ORM) que facilita la interacción con SQLite.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/hilt.png" alt="Hilt" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Hilt</span>
-                <span class="tech-desc">Solución de inyección de dependencias recomendada para aplicaciones Android.</span>
-            </div>
+      <!-- Hilt -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/hilt.png" alt="Hilt" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Hilt</h3>
+          <p class="text-slate-400 text-sm leading-tight">Solución de inyección de dependencias recomendada para Android.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/navigation.svg" alt="Navigation Compose" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Navigation Compose</span>
-                <span class="tech-desc">Librería de Jetpack para manejar las transiciones entre pantallas (Composables).</span>
-            </div>
+      <!-- Navigation Compose -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/navigation.svg" alt="Navigation Compose" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Navigation Compose</h3>
+          <p class="text-slate-400 text-sm leading-tight">Librería para manejar las transiciones entre pantallas (Composables).</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/coroutines.png" alt="Kotlin Coroutines" class="tech-logo" /> 
-            <div class="tech-info">
-                <span class="tech-name">Kotlin Coroutines</span>
-                <span class="tech-desc">Framework para la gestión de asincronía y concurrencia simplificada.</span>
-            </div>
+      <!-- Kotlin Coroutines -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/coroutines.png" alt="Kotlin Coroutines" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Kotlin Coroutines</h3>
+          <p class="text-slate-400 text-sm leading-tight">Framework para gestión de asincronía y concurrencia simplificada.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/hilt.png" alt="Retrofit" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Retrofit</span>
-                <span class="tech-desc">Cliente HTTP seguro y basado en tipos para interactuar con APIs REST.</span>
-            </div>
+      <!-- Retrofit -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/hilt.png" alt="Retrofit" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Retrofit</h3>
+          <p class="text-slate-400 text-sm leading-tight">Cliente HTTP tipado para interactuar con APIs REST.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/gson.svg" alt="Gson" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Gson</span>
-                <span class="tech-desc">Librería de Google para serialización/deserialización de objetos Java/Kotlin a JSON.</span>
-            </div>
+      <!-- Gson -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/gson.svg" alt="Gson" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Gson</h3>
+          <p class="text-slate-400 text-sm leading-tight">Librería para (de)serialización JSON en Java/Kotlin.</p>
         </div>
+      </div>
 
-        <div class="tech-card">
-            <img src="/images/tech/coil.svg" alt="Coil" class="tech-logo" />
-            <div class="tech-info">
-                <span class="tech-name">Coil</span>
-                <span class="tech-desc">Librería moderna y rápida para la carga de imágenes en Compose y Views.</span>
-            </div>
+      <!-- Coil -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/coil.svg" alt="Coil" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Coil</h3>
+          <p class="text-slate-400 text-sm leading-tight">Librería moderna y rápida para carga de imágenes en Compose y Views.</p>
         </div>
+      </div>
 
+      <!-- Kotlin Serialization -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/kotlin.svg" alt="Coil" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">Kotlin Serialization</h3>
+          <p class="text-slate-400 text-sm leading-tight">Librería para (de)serializacion JSON en Kotlin.</p>
+        </div>
+      </div>
+
+      <!-- Kotlin Serialization -->
+      <div class="group flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <img src="/images/tech/hilt.png" alt="Coil" class="w-10 h-10 object-contain" />
+        <div class="text-left">
+          <h3 class="text-white font-semibold text-lg">OkHttp</h3>
+          <p class="text-slate-400 text-sm leading-tight">Biblioteca de cliente HTTP para aplicaciones Java/Kotlin y Android eficiente en solicitudes de red y optimizacion del rendimiento.</p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

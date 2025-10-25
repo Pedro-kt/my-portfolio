@@ -1,45 +1,87 @@
-<section id="contact" class="contact-section fade-in-section">
-  <h2>Contacto</h2>
-  <p>Si querés colaborar, hacer una consulta o simplemente saludar, enviame un mensaje!</p>
+<section id="contact" class="py-24 px-6 bg-slate-950">
+  <div class="text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+      Contacto
+    </h2>
+    <p class="text-base text-white/70 text-center max-w-[600px] mx-auto mb-8 leading-relaxed">
+      Si querés colaborar, hacer una consulta o simplemente saludar, enviame un mensaje!
+    </p>
+  </div>
 
-  <form action="https://formspree.io/f/xyznpdrg" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Tu nombre" required />
-    <input type="email" name="email" placeholder="Tu correo" required />
-    <textarea name="message" rows="5" placeholder="Tu mensaje..." required></textarea>
-    <button type="submit" class="submit-btn">Enviar</button>
+  <form action="https://formspree.io/f/xyznpdrg" method="POST" class="flex flex-col gap-4 max-w-[500px] mx-auto">
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="Tu nombre" 
+      required 
+      class="bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white text-base w-full transition-all duration-300 placeholder:text-white/60 focus:outline-none focus:border-[#3DDC84] focus:shadow-[0_0_12px_rgba(61,220,132,0.4)]"
+    />
+    
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Tu correo" 
+      required 
+      class="bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white text-base w-full transition-all duration-300 placeholder:text-white/60 focus:outline-none focus:border-[#3DDC84] focus:shadow-[0_0_12px_rgba(61,220,132,0.4)]"
+    />
+    
+    <textarea 
+      name="message" 
+      rows="5" 
+      placeholder="Tu mensaje..." 
+      required 
+      class="bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white text-base w-full transition-all duration-300 placeholder:text-white/60 focus:outline-none focus:border-[#3DDC84] focus:shadow-[0_0_12px_rgba(61,220,132,0.4)] resize-vertical"
+    ></textarea>
+    
+    <button 
+      type="submit" 
+      class="px-7 py-3 bg-[#3DDC84] text-white font-semibold rounded-xl shadow-lg shadow-[#3DDC84]/30 transition-all duration-300 hover:scale-105 hover:shadow-[#3DDC84]/50"
+    >
+      Enviar
+    </button>
   </form>
 
-  <div class="contact-buttons">
-  <a href="https://github.com/Pedro-kt" target="_blank" class="contact-btn">
-    <img src="/images/icons/github.svg" alt="GitHub" />
-    GitHub
-  </a>
-  <a href="https://www.linkedin.com/in/pedro-bustamante-12016a334" target="_blank" class="contact-btn">
-    <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
-    LinkedIn
-  </a>
-</div>
-
+  <div class="flex justify-center gap-4 mt-6 flex-wrap">
+    <a 
+      href="https://github.com/Pedro-kt" 
+      target="_blank" 
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold no-underline text-white bg-gradient-to-r from-[#3DDC84]/50 to-slate-800/50 border border-white/20 transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#3DDC84] hover:to-[#1B5E20] hover:shadow-lg hover:shadow-[#3DDC84]/40"
+    >
+      <img src="/images/icons/github.svg" alt="GitHub" class="w-[18px] h-[18px]" />
+      GitHub
+    </a>
+    
+    <a 
+      href="https://www.linkedin.com/in/pedro-bustamante-12016a334" 
+      target="_blank" 
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold no-underline text-white bg-gradient-to-r from-[#3DDC84]/50 to-slate-800/50 border border-white/20 transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#3DDC84] hover:to-[#1B5E20] hover:shadow-lg hover:shadow-[#3DDC84]/40"
+    >
+      <img src="/images/icons/linkedin.svg" alt="LinkedIn" class="w-[18px] h-[18px]" />
+      LinkedIn
+    </a>
+  </div>
 </section>
 
 
 <script>
-const form = document.querySelector('.contact-form');
+const form = document.querySelector('form');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: formData,
-    headers: { 'Accept': 'application/json' }
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      alert('¡Gracias! Tu mensaje fue enviado.');
+      form.reset();
+    } else {
+      alert('Hubo un error, intenta nuevamente.');
+    }
   });
-
-  if (response.ok) {
-    alert('¡Gracias! Tu mensaje fue enviado.');
-    form.reset();
-  } else {
-    alert('Hubo un error, intenta nuevamente.');
-  }
-});
+}
 </script>
