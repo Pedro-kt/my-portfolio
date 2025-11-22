@@ -1,0 +1,122 @@
+<!-- Toast Container -->
+<div
+  id="toast-container"
+  class="fixed top-4 right-4 z-[100] flex flex-col gap-3 pointer-events-none"
+  aria-live="polite"
+  aria-atomic="true"
+>
+</div>
+
+<style>
+  .toast {
+    pointer-events: auto;
+    animation: slideIn 0.3s ease-out;
+    min-width: 300px;
+    max-width: 420px;
+  }
+
+  .toast.hiding {
+    animation: slideOut 0.3s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  interface ToastOptions {
+    message: string;
+    type?: 'success' | 'error' | 'info';
+    duration?: number;
+  }
+
+  function showToast({ message, type = 'success', duration = 5000 }: ToastOptions) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = `toast flex items-start gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-sm border-2 ${
+      type === 'success'
+        ? 'bg-[#10B981]/95 dark:bg-[#10B981]/90 border-[#10B981]/20 text-white'
+        : type === 'error'
+        ? 'bg-[#EF4444]/95 dark:bg-[#EF4444]/90 border-[#EF4444]/20 text-white'
+        : 'bg-[#6366F1]/95 dark:bg-[#6366F1]/90 border-[#6366F1]/20 text-white'
+    }`;
+
+    // Icon based on type
+    const icon = type === 'success'
+      ? `<svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+         </svg>`
+      : type === 'error'
+      ? `<svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+         </svg>`
+      : `<svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+         </svg>`;
+
+    toast.innerHTML = `
+      ${icon}
+      <div class="flex-1">
+        <p class="font-semibold text-sm leading-relaxed">${message}</p>
+      </div>
+      <button class="close-toast text-white/80 hover:text-white transition-colors flex-shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    `;
+
+    // Close button handler
+    const closeButton = toast.querySelector('.close-toast');
+    closeButton?.addEventListener('click', () => removeToast(toast));
+
+    // Add to container
+    container.appendChild(toast);
+
+    // Auto remove after duration
+    const timeout = setTimeout(() => removeToast(toast), duration);
+
+    // Store timeout reference for cleanup
+    (toast as any)._timeout = timeout;
+  }
+
+  function removeToast(toast: HTMLElement) {
+    // Clear timeout
+    if ((toast as any)._timeout) {
+      clearTimeout((toast as any)._timeout);
+    }
+
+    // Add hiding animation
+    toast.classList.add('hiding');
+
+    // Remove after animation
+    setTimeout(() => {
+      toast.remove();
+    }, 300);
+  }
+
+  // Expose globally for use in other components
+  (window as any).showToast = showToast;
+</script>

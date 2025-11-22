@@ -1,102 +1,132 @@
-<section id="education" class="py-20 px-6 bg-[#0f0f0f]">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Formación</h2>
+<section id="education" class="py-20 px-6 bg-white dark:bg-[#0F1419]">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 dark:text-[#E4E6EB]" data-i18n="studies.title">Formación</h2>
+      <p class="text-xl text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.subtitle">Mi camino de aprendizaje continuo</p>
+    </div>
 
-    <div class="space-y-12">
-      <!-- Desarrollo Autodidacta -->
-      <div class="relative pl-8 border-l-2 border-[#3DDC84]">
-        <div
-          class="absolute -left-[9px] top-0 w-4 h-4 bg-[#3DDC84] rounded-full"
-        >
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <!-- Autodidacta Card -->
+      <div class="group bg-gradient-to-br from-white to-[#F9FAFB] dark:from-[#1A1F2E] dark:to-[#0F1419] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-3xl p-8 hover:border-[#6366F1] hover:shadow-2xl hover:shadow-[#6366F1]/10 transition-all fade-in">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#6366F1] to-[#4F46E5] rounded-2xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold dark:text-[#E4E6EB]" data-i18n="studies.android.title">Desarrollo Android</h3>
+            <p class="text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.android.type">Autodidacta</p>
+          </div>
         </div>
-        <div class="mb-1 text-sm text-[#3DDC84] font-semibold">
-          2024 - Actualidad
+
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#6366F1]/10 rounded-full text-sm font-semibold text-[#6366F1] mb-4">
+          <span data-i18n="studies.android.period">2024 - Actualidad</span>
         </div>
-        <h3 class="text-xl font-bold mb-2">Desarrollo Android</h3>
-        <p class="text-[#a3a3a3] mb-4">Autodidacta</p>
-        <p class="text-[#a3a3a3] leading-relaxed mb-4">
+
+        <p class="text-[#6B7280] dark:text-[#9CA3AF] leading-relaxed mb-6" data-i18n="studies.android.description">
           Aprendizaje continuo de desarrollo Android moderno con Kotlin, Jetpack
           Compose y librerías actuales. Construcción de proyectos funcionales
           integrando Firebase, APIs RESTful y siguiendo buenas prácticas de
           arquitectura.
         </p>
-        <div class="flex flex-wrap gap-2">
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Kotlin</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Jetpack Compose</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Firebase</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >APIs RESTful</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >MVVM</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Clean Architecture</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >SQLite</span
-          >
+
+        <div class="space-y-2 mb-6">
+          <div class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-[#6366F1] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.android.skill1">Kotlin & Jetpack Compose</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-[#6366F1] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.android.skill2">Firebase & RESTful APIs</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-[#6366F1] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.android.skill3">MVVM & Clean Architecture</span>
+          </div>
+        </div>
+
+        <div class="border-t-2 border-[#E5E7EB] dark:border-[#2D3748] pt-4">
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Kotlin</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Jetpack Compose</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Firebase</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Room</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Java</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Coroutines</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Retrofit</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Serialization</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">APIs RESTful</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Android SDKs</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Clean Architecture</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">MVVM</span>
+          </div>
         </div>
       </div>
 
-      <!-- Tecnicatura -->
-      <div class="relative pl-8 border-l-2 border-[#3DDC84]">
-        <div
-          class="absolute -left-[9px] top-0 w-4 h-4 bg-[#3DDC84] rounded-full"
-        >
+      <!-- Tecnicatura Card -->
+      <div class="group bg-gradient-to-br from-white to-[#F9FAFB] dark:from-[#1A1F2E] dark:to-[#0F1419] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-3xl p-8 hover:border-[#6366F1] hover:shadow-2xl hover:shadow-[#6366F1]/10 transition-all fade-in">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#6366F1] to-[#4F46E5] rounded-2xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold dark:text-[#E4E6EB]" data-i18n="studies.tech.title">Tecnicatura Superior</h3>
+            <p class="text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.tech.subtitle">Desarrollo de Software</p>
+          </div>
         </div>
-        <div class="mb-1 text-sm text-[#3DDC84] font-semibold">2024 - 2026</div>
-        <h3 class="text-xl font-bold mb-2">
-          Tecnicatura Superior en Desarrollo de Software
-        </h3>
-        <p class="text-[#a3a3a3] mb-4">Instituto Superior Roque Gonzalez</p>
-        <p class="text-[#a3a3a3] leading-relaxed mb-4">
+
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#6366F1]/10 rounded-full text-sm font-semibold text-[#6366F1] mb-4">
+          <span data-i18n="studies.tech.period">2024 - 2026</span>
+        </div>
+
+        <p class="text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4" data-i18n="studies.tech.institution">Instituto Superior Roque Gonzalez</p>
+
+        <p class="text-[#6B7280] dark:text-[#9CA3AF] leading-relaxed mb-6" data-i18n="studies.tech.description">
           Formación integral en desarrollo de software, bases de datos,
           programación orientada a objetos, estructuras de datos, metodologías
           ágiles (Scrum) y trabajo colaborativo en proyectos de equipo.
         </p>
-        <div class="flex flex-wrap gap-2">
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >POO</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Bases de datos</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >SQL - SQLite</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Scrum</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >SDLC</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Análisis y diseño de sistemas</span
-          >
-          <span
-            class="text-xs px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded"
-            >Trabajo en equipo</span
-          >
+
+        <div class="space-y-2 mb-6">
+          <div class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-[#6366F1] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.tech.skill1">Programación Orientada a Objetos</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-[#6366F1] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.tech.skill2">Bases de Datos & SQL</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-[#6366F1] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="studies.tech.skill3">Metodologías Ágiles (Scrum)</span>
+          </div>
+        </div>
+
+        <div class="border-t-2 border-[#E5E7EB] dark:border-[#2D3748] pt-4">
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Software Development</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">SQL and Database</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">System Operative</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">SDLC</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Agile methodologies</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Collaborative work</span>
+            <span class="px-3 py-1 bg-white dark:bg-[#1A1F2E] border border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] rounded-lg text-xs font-medium">Logic and data structure</span>
+          </div>
         </div>
       </div>
     </div>

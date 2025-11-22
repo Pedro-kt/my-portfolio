@@ -1,18 +1,25 @@
 ---
 import SeijakuListCard from "./SeijakuListCard.astro";
+import SeijakuListModal from "./SeijakuListModal.astro";
 ---
 
-<section id="projects" class="py-20 px-6">
+<section id="projects" class="py-20 px-6 dark:bg-[#0F1419]">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Proyectos</h2>
-    <p class="text-[#a3a3a3] mb-12 text-center">
-      Aplicación que demuestra mis habilidades en desarrollo Android
-    </p>
+    <div class="fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 dark:text-[#E4E6EB] text-center" data-i18n="projects.title">Proyectos</h2>
+      <p class="text-[#6B7280] dark:text-[#9CA3AF] mb-12 text-center" data-i18n="projects.subtitle">
+        Aplicación que demuestra mis habilidades en desarrollo Android
+      </p>
+    </div>
 
-    <SeijakuListCard />
+    <div class="fade-in">
+      <SeijakuListCard />
+    </div>
 
-    <p class="text-center text-[#a3a3a3] text-sm mt-8">
+    <p class="text-center text-[#6B7280] dark:text-[#9CA3AF] text-sm mt-8" data-i18n="projects.more">
       Más proyectos próximamente...
     </p>
   </div>
 </section>
+
+<SeijakuListModal />

@@ -1,143 +1,220 @@
-<section id="contact" class="py-20 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Contacto</h2>
-    <p class="text-[#a3a3a3] mb-12 max-w-2xl mx-auto">
-      ¿Querés colaborar en un proyecto o simplemente charlar? No dudes en
-      contactarme
-    </p>
-
-    <!-- O formulario simple -->
-    <div class="max-w-md mx-auto">
-      <form
-        action="https://formspree.io/f/xyznpdrg"
-        method="POST"
-        class="space-y-4"
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Tu nombre"
-          required
-          class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg text-white placeholder:text-[#a3a3a3] focus:border-[#3DDC84] focus:outline-none transition-colors"
-        />
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Tu email"
-          required
-          class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg text-white placeholder:text-[#a3a3a3] focus:border-[#3DDC84] focus:outline-none transition-colors"
-        />
-
-        <textarea
-          name="message"
-          rows="4"
-          placeholder="Tu mensaje..."
-          required
-          class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg text-white placeholder:text-[#a3a3a3] focus:border-[#3DDC84] focus:outline-none transition-colors resize-none"
-        ></textarea>
-
-        <button
-          type="submit"
-          class="w-full px-6 py-3 bg-[#3DDC84] text-black font-semibold rounded-lg hover:bg-[#34c977] transition-colors"
-        >
-          Enviar mensaje
-        </button>
-      </form>
+<section id="contact" class="py-20 px-6 dark:bg-[#0F1419]">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 dark:text-[#E4E6EB]" data-i18n="contact.title">Contacto</h2>
+      <p class="text-xl text-[#6B7280] dark:text-[#9CA3AF] max-w-2xl mx-auto" data-i18n="contact.subtitle">
+        ¿Tienes un proyecto en mente? ¡Hablemos!
+      </p>
     </div>
 
-    <div class="mb-8"></div>
+    <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto fade-in">
+      <!-- Left Column - Contact Info -->
+      <div class="space-y-6">
+        <div class="bg-gradient-to-br from-[#6366F1] to-[#4F46E5] rounded-3xl p-8 text-white">
+          <h3 class="text-2xl font-bold mb-4" data-i18n="contact.info.title">Información de contacto</h3>
+          <p class="text-white/80 mb-8" data-i18n="contact.info.description">
+            Abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme.
+          </p>
 
-    <p class="text-[#a3a3a3] mb-12 max-w-2xl mx-auto">
-      O también podés contactarme directamente a través de:
-    </p>
+          <div class="space-y-4">
+            <a
+              href="mailto:bustamante.dev.mobile@gmail.com"
+              class="flex items-center gap-4 p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-all group"
+            >
+              <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm text-white/60">Email</div>
+                <div class="font-semibold">bustamante.dev.mobile@gmail.com</div>
+              </div>
+            </a>
 
-    <!-- Links directos -->
-    <div class="flex flex-wrap gap-4 justify-center mb-12">
-      <a
-        href="mailto:bustamante.dev.mobile@gmail.com"
-        class="flex items-center gap-3 px-6 py-4 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg hover:border-[#3DDC84] transition-colors group"
-      >
-        <svg
-          class="w-6 h-6 text-[#a3a3a3] group-hover:text-[#3DDC84] transition-colors"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          ></path>
-        </svg>
-        <div class="text-left">
-          <div class="text-xs text-[#a3a3a3]">Email</div>
-          <div class="font-semibold">bustamante.dev.mobile@gmail.com</div>
+            <a
+              href="https://github.com/Pedro-kt"
+              target="_blank"
+              class="flex items-center gap-4 p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-all group"
+            >
+              <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm text-white/60">GitHub</div>
+                <div class="font-semibold">@Pedro-kt</div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/pedro-bustamante-12016a334"
+              target="_blank"
+              class="flex items-center gap-4 p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-all group"
+            >
+              <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm text-white/60">LinkedIn</div>
+                <div class="font-semibold">Pedro Bustamante</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-white/20">
+            <div class="flex items-center gap-2 text-white/60 text-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <span>Posadas, Misiones, Argentina</span>
+            </div>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a
-        href="https://github.com/Pedro-kt"
-        target="_blank"
-        class="flex items-center gap-3 px-6 py-4 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg hover:border-[#3DDC84] transition-colors group"
-      >
-        <svg
-          class="w-6 h-6 text-[#a3a3a3] group-hover:text-[#3DDC84] transition-colors"
-          fill="currentColor"
-          viewBox="0 0 24 24"
+      <!-- Right Column - Contact Form -->
+      <div class="bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-3xl p-8">
+        <form
+          action="https://formspree.io/f/xyznpdrg"
+          method="POST"
+          class="space-y-6"
         >
-          <path
-            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-          ></path>
-        </svg>
-        <div class="text-left">
-          <div class="text-xs text-[#a3a3a3]">GitHub</div>
-          <div class="font-semibold">@Pedro-kt</div>
-        </div>
-      </a>
+          <div>
+            <label for="name" class="block text-sm font-semibold mb-2 dark:text-[#E4E6EB]" data-i18n="contact.name">Nombre</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 bg-[#F9FAFB] dark:bg-[#0F1419] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-xl text-[#1A1A1A] dark:text-[#E4E6EB] placeholder:text-[#9CA3AF] focus:border-[#6366F1] focus:ring-4 focus:ring-[#6366F1]/10 focus:outline-none transition-all"
+              data-i18n-placeholder="contact.name.placeholder"
+              placeholder="Tu nombre completo"
+            />
+          </div>
 
-      <a
-        href="https://www.linkedin.com/in/pedro-bustamante-12016a334"
-        target="_blank"
-        class="flex items-center gap-3 px-6 py-4 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg hover:border-[#3DDC84] transition-colors group"
-      >
-        <svg
-          class="w-6 h-6 text-[#a3a3a3] group-hover:text-[#3DDC84] transition-colors"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-          ></path>
-        </svg>
-        <div class="text-left">
-          <div class="text-xs text-[#a3a3a3]">LinkedIn</div>
-          <div class="font-semibold">Pedro Bustamante</div>
-        </div>
-      </a>
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-2 dark:text-[#E4E6EB]" data-i18n="contact.email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 bg-[#F9FAFB] dark:bg-[#0F1419] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-xl text-[#1A1A1A] dark:text-[#E4E6EB] placeholder:text-[#9CA3AF] focus:border-[#6366F1] focus:ring-4 focus:ring-[#6366F1]/10 focus:outline-none transition-all"
+              data-i18n-placeholder="contact.email.placeholder"
+              placeholder="tu@email.com"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-semibold mb-2 dark:text-[#E4E6EB]" data-i18n="contact.message">Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full px-4 py-3 bg-[#F9FAFB] dark:bg-[#0F1419] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-xl text-[#1A1A1A] dark:text-[#E4E6EB] placeholder:text-[#9CA3AF] focus:border-[#6366F1] focus:ring-4 focus:ring-[#6366F1]/10 focus:outline-none transition-all resize-none"
+              data-i18n-placeholder="contact.message.placeholder"
+              placeholder="Cuéntame sobre tu proyecto..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full px-8 py-4 bg-[#6366F1] text-white font-semibold rounded-xl hover:bg-[#4F46E5] transition-all shadow-lg shadow-[#6366F1]/30 hover:shadow-xl hover:shadow-[#6366F1]/40 hover:-translate-y-0.5"
+            data-i18n="contact.send"
+          >
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
 <script>
-  const form = document.querySelector("form");
+  import { translations, type Language } from '../i18n/translations';
+
+  const form = document.querySelector("#contact form") as HTMLFormElement;
+
+  // Get current language from localStorage
+  function getCurrentLanguage(): Language {
+    const saved = localStorage.getItem('language');
+    return (saved === 'en' || saved === 'es') ? saved : 'es';
+  }
+
+  // Update placeholders
+  function updatePlaceholders() {
+    const lang = getCurrentLanguage();
+    const elements = document.querySelectorAll('[data-i18n-placeholder]');
+
+    elements.forEach(element => {
+      const key = element.getAttribute('data-i18n-placeholder');
+      if (key && key in translations[lang]) {
+        (element as HTMLInputElement | HTMLTextAreaElement).placeholder =
+          translations[lang][key as keyof typeof translations.es];
+      }
+    });
+  }
+
+  // Initialize placeholders
+  updatePlaceholders();
+
+  // Listen for language changes
+  window.addEventListener('languagechange', () => {
+    updatePlaceholders();
+  });
 
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
 
-      if (response.ok) {
-        alert("¡Gracias! Tu mensaje fue enviado.");
-        form.reset();
-      } else {
-        alert("Hubo un error, intenta nuevamente.");
+      const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = submitButton.innerHTML;
+
+      // Show loading state
+      submitButton.disabled = true;
+      submitButton.innerHTML = `
+        <svg class="animate-spin h-5 w-5 mx-auto" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+      `;
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          const lang = getCurrentLanguage();
+          (window as any).showToast?.({
+            message: translations[lang]['contact.success'],
+            type: "success",
+            duration: 6000
+          });
+          form.reset();
+        } else {
+          throw new Error('Error al enviar');
+        }
+      } catch (error) {
+        const lang = getCurrentLanguage();
+        (window as any).showToast?.({
+          message: translations[lang]['contact.error'],
+          type: "error",
+          duration: 5000
+        });
+      } finally {
+        // Restore button state
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalText;
       }
     });
   }

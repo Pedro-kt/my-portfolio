@@ -1,0 +1,42 @@
+---
+// Language Toggle Component
+---
+
+<button
+  id="language-toggle"
+  class="w-10 h-10 rounded-xl bg-[#F9FAFB] dark:bg-[#2D3748] border-2 border-[#E5E7EB] dark:border-[#2D3748] flex items-center justify-center hover:border-[#6366F1] dark:hover:border-[#6366F1] transition-all group"
+  aria-label="Toggle language"
+  title="Change language"
+>
+  <span class="text-sm font-bold text-[#6B7280] dark:text-[#9CA3AF] group-hover:text-[#6366F1] transition-colors" id="lang-text">ES</span>
+</button>
+
+<script>
+  import { currentLanguage, toggleLanguage } from '../i18n/language';
+
+  const button = document.getElementById('language-toggle');
+  const langText = document.getElementById('lang-text');
+
+  // Update button text based on current language
+  function updateButtonText() {
+    const lang = currentLanguage.get();
+    if (langText) {
+      langText.textContent = lang.toUpperCase();
+    }
+  }
+
+  // Initialize
+  updateButtonText();
+
+  // Subscribe to language changes
+  currentLanguage.subscribe(() => {
+    updateButtonText();
+  });
+
+  // Toggle language on click
+  button?.addEventListener('click', () => {
+    toggleLanguage();
+    // Reload page to apply translations
+    window.location.reload();
+  });
+</script>

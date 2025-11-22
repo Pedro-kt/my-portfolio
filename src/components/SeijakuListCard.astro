@@ -1,98 +1,102 @@
 ---
-// Importa el modal que definiremos en el siguiente paso
-import SeijakuListModal from "./SeijakuListModal.astro";
 ---
 
 <div
-  class="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg overflow-hidden hover:border-[#3DDC84] transition-colors"
+  class="bg-gradient-to-br from-white to-[#F9FAFB] dark:from-[#1A1F2E] dark:to-[#0F1419] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-3xl overflow-hidden hover:border-[#6366F1] hover:shadow-2xl hover:shadow-[#6366F1]/10 transition-all"
 >
-  <div class="p-8 border-b border-[#2a2a2a]">
+  <div class="p-8 md:p-10">
     <div
-      class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4"
+      class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4"
     >
       <div class="flex items-center gap-4">
-        <img
-          src="/images/projects/seijaku_list/seijaku.png"
-          alt="SeijakuList"
-          class="w-16 h-16 rounded-lg border border-[#2a2a2a]"
-        />
+        <div class="bg-[#F9FAFB] dark:bg-[#0F1419] p-3 rounded-2xl border-2 border-[#E5E7EB] dark:border-[#2D3748]">
+          <img
+            src="/images/projects/seijaku_list/seijaku.png"
+            alt="SeijakuList"
+            class="w-14 h-14 rounded-lg"
+          />
+        </div>
         <div>
-          <h3 class="text-2xl font-bold">SeijakuList</h3>
-          <p class="text-[#a3a3a3] text-sm">Mayo 2025 - Actualidad</p>
+          <h3 class="text-2xl md:text-3xl font-bold dark:text-[#E4E6EB]">SeijakuList</h3>
+          <p class="text-[#6B7280] dark:text-[#9CA3AF] text-sm" data-i18n="projects.seijaku.period">Mayo 2025 - Actualidad</p>
         </div>
       </div>
-      <span
-        class="px-3 py-1 bg-[#3DDC84]/10 text-[#3DDC84] text-xs font-semibold rounded-full border border-[#3DDC84]/20"
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 bg-[#10B981]/10 rounded-full border-2 border-[#10B981]/20"
       >
-        En desarrollo
-      </span>
+        <div class="w-2 h-2 bg-[#10B981] rounded-full animate-pulse"></div>
+        <span class="text-sm font-semibold text-[#10B981]" data-i18n="projects.seijaku.status">En desarrollo</span>
+      </div>
     </div>
 
-    <p class="text-[#a3a3a3] leading-relaxed mb-6">
+    <p class="text-[#6B7280] dark:text-[#9CA3AF] leading-relaxed mb-6 text-lg" data-i18n-template="projects.seijaku.description">
       Aplicación de gestión de historial de animes desarrollada con <span
-        class="text-white">Kotlin</span
-      > y <span class="text-white">Jetpack Compose</span>. Utiliza la Jikan REST
-      API para descubrir nuevos títulos, implementa <span class="text-white"
+        class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Kotlin</span
+      > y <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Jetpack Compose</span>. Utiliza la Jikan REST
+      API para descubrir nuevos títulos, implementa <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold"
         >arquitectura MVVM</span
-      > y <span class="text-white">Clean Architecture</span>,
-      <span class="text-white">Room</span> para persistencia local y <span
-        class="text-white">Coroutines/Retrofit</span
+      > y <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Clean Architecture</span>,
+      <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Room</span> para persistencia local y <span
+        class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Coroutines/Retrofit</span
       > para operaciones asíncronas.
     </p>
 
-    <div class="flex flex-wrap gap-2 mb-6">
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >Kotlin</span
-      >
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >Jetpack Compose</span
-      >
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >MVVM</span
-      >
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >Room</span
-      >
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >Retrofit</span
-      >
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >Hilt</span
-      >
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >Coroutines</span
-      >
-      <span
-        class="px-3 py-1 bg-[#0f0f0f] text-[#a3a3a3] text-xs rounded border border-[#2a2a2a]"
-        >Jikan API</span
-      >
+    <div class="border-t-2 border-[#E5E7EB] dark:border-[#2D3748] pt-6 mb-6">
+      <div class="text-sm font-semibold text-[#6B7280] dark:text-[#9CA3AF] mb-3" data-i18n="projects.seijaku.tech">Tecnologías utilizadas</div>
+      <div class="flex flex-wrap gap-2">
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >Kotlin</span
+        >
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >Jetpack Compose</span
+        >
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >MVVM</span
+        >
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >Room</span
+        >
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >Retrofit</span
+        >
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >Hilt</span
+        >
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >Coroutines</span
+        >
+        <span
+          class="px-4 py-2 bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] dark:text-[#E4E6EB] text-sm rounded-xl font-medium hover:border-[#6366F1] transition-colors"
+          >Jikan API</span
+        >
+      </div>
     </div>
 
     <div class="flex flex-wrap gap-3">
       <button
         id="open-seijaku-modal"
         type="button"
-        class="inline-flex items-center gap-2 px-4 py-2 bg-[#3DDC84] text-black font-semibold text-sm rounded hover:bg-[#34c977] transition-colors"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-[#6366F1] text-white font-semibold text-sm rounded-xl hover:bg-[#4F46E5] transition-all shadow-lg shadow-[#6366F1]/30 hover:shadow-xl hover:shadow-[#6366F1]/40 hover:-translate-y-0.5"
       >
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
           <path
             d="M12 4.5C7.5 4.5 3 7 3 12s4.5 7.5 9 7.5 9-2.5 9-7.5-4.5-7.5-9-7.5zm0 13c-3.03 0-5.5-2.47-5.5-5.5S8.97 6.5 12 6.5s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5zM12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm0 1a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
           ></path>
         </svg>
-        Ver detalles
+        <span data-i18n="projects.seijaku.details">Ver detalles</span>
       </button>
 
       <a
         href="https://github.com/Pedro-kt/seijaku-list"
         target="_blank"
-        class="inline-flex items-center gap-2 px-4 py-2 border border-[#2a2a2a] font-semibold text-sm rounded hover:border-[#3DDC84] transition-colors"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-[#1A1F2E] text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold text-sm rounded-xl border-2 border-[#E5E7EB] dark:border-[#2D3748] hover:border-[#6366F1] transition-all hover:-translate-y-0.5"
       >
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
           <path
@@ -104,7 +108,7 @@ import SeijakuListModal from "./SeijakuListModal.astro";
 
       <button
         disabled
-        class="inline-flex items-center gap-2 px-4 py-2 bg-[#0f0f0f] text-[#a3a3a3] text-sm rounded border border-[#2a2a2a] opacity-50 cursor-not-allowed"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-[#F9FAFB] dark:bg-[#0F1419] text-[#9CA3AF] text-sm rounded-xl border-2 border-[#E5E7EB] dark:border-[#2D3748] opacity-60 cursor-not-allowed font-semibold"
       >
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
           <path
@@ -117,23 +121,52 @@ import SeijakuListModal from "./SeijakuListModal.astro";
       <a
         href="#"
         target="_blank"
-        class="inline-flex items-center gap-2 px-4 py-2 border border-[#2a2a2a] font-semibold text-sm rounded hover:border-[#3DDC84] transition-colors"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-[#1A1F2E] text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold text-sm rounded-xl border-2 border-[#E5E7EB] dark:border-[#2D3748] hover:border-[#6366F1] transition-all hover:-translate-y-0.5"
       >
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
           <path
             d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
           ></path>
         </svg>
-        Demo
+        <span data-i18n="projects.seijaku.demo">Demo</span>
       </a>
     </div>
   </div>
 </div>
 
-<SeijakuListModal />
-
 <script>
-  // Usa 'client:load' si esto está en un componente de framework, si es solo .astro, usa el script normal
+  import type { Language } from '../i18n/translations';
+
+  function getCurrentLanguage(): Language {
+    const saved = localStorage.getItem('language');
+    return (saved === 'en' || saved === 'es') ? saved : 'es';
+  }
+
+  function updateSeijakuDescription() {
+    const lang = getCurrentLanguage();
+    const descElement = document.querySelector('[data-i18n-template="projects.seijaku.description"]');
+
+    if (descElement) {
+      if (lang === 'es') {
+        descElement.innerHTML = `
+          Aplicación de gestión de historial de animes desarrollada con <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Kotlin</span> y <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Jetpack Compose</span>. Utiliza la Jikan REST API para descubrir nuevos títulos, implementa <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">arquitectura MVVM</span> y <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Clean Architecture</span>, <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Room</span> para persistencia local y <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Coroutines/Retrofit</span> para operaciones asíncronas.
+        `;
+      } else {
+        descElement.innerHTML = `
+          Anime history management application developed with <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Kotlin</span> and <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Jetpack Compose</span>. Uses Jikan REST API to discover new titles, implements <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">MVVM architecture</span> and <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Clean Architecture</span>, <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Room</span> for local persistence and <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Coroutines/Retrofit</span> for asynchronous operations.
+        `;
+      }
+    }
+  }
+
+  // Initialize on load
+  updateSeijakuDescription();
+
+  // Listen for language changes
+  window.addEventListener('languagechange', () => {
+    updateSeijakuDescription();
+  });
+
   document.addEventListener("DOMContentLoaded", () => {
     // Referencias
     const openButton = document.getElementById("open-seijaku-modal");
@@ -143,14 +176,16 @@ import SeijakuListModal from "./SeijakuListModal.astro";
     // Funciones
     const openModal = () => {
       if (modal) {
-        modal.style.display = "block";
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
         document.body.style.overflow = "hidden"; // Bloquea el scroll de fondo
       }
     };
 
     const closeModal = () => {
       if (modal) {
-        modal.style.display = "none";
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
         document.body.style.overflow = ""; // Restaura el scroll
       }
     };

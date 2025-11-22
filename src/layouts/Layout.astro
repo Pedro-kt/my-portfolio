@@ -2,17 +2,109 @@
 import "../styles/global.css";
 ---
 
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedro Bustamante | Android Developer</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Pedro Bustamante | Android Developer - Kotlin & Jetpack Compose</title>
+    <meta
+      name="title"
+      content="Pedro Bustamante | Android Developer - Kotlin & Jetpack Compose"
+    />
     <meta
       name="description"
-      content="Portfolio de Pedro Bustamante - Desarrollador Android especializado en Kotlin y Jetpack Compose"
+      content="Desarrollador Android especializado en Kotlin y Jetpack Compose. Experiencia en arquitectura Clean, MVVM, Firebase y desarrollo fintech. Portfolio de proyectos mobile."
     />
+    <meta name="keywords" content="Android Developer, Kotlin, Jetpack Compose, Mobile Development, MVVM, Clean Architecture, Firebase, Argentina" />
+    <meta name="author" content="Pedro Bustamante" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pedro-bustamante.dev/" />
+    <meta property="og:title" content="Pedro Bustamante | Android Developer - Kotlin & Jetpack Compose" />
+    <meta property="og:description" content="Desarrollador Android especializado en Kotlin y Jetpack Compose. Experiencia en arquitectura Clean, MVVM, Firebase y desarrollo fintech." />
+    <meta property="og:image" content="https://pedro-bustamante.dev/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pedro-bustamante.dev/" />
+    <meta property="twitter:title" content="Pedro Bustamante | Android Developer - Kotlin & Jetpack Compose" />
+    <meta property="twitter:description" content="Desarrollador Android especializado en Kotlin y Jetpack Compose. Experiencia en arquitectura Clean, MVVM, Firebase y desarrollo fintech." />
+    <meta property="twitter:image" content="https://pedro-bustamante.dev/og-image.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline>
+      // Initialize theme before page renders to prevent flash
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+
+      // Initialize language before page renders
+      (function() {
+        const savedLang = localStorage.getItem('language');
+        const lang = (savedLang === 'en' || savedLang === 'es') ? savedLang : 'es';
+        document.documentElement.lang = lang;
+      })();
+    </script>
+
+    <style is:inline>
+      /* Scroll animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Stagger animation delays */
+      .fade-in:nth-child(1) { transition-delay: 0.1s; }
+      .fade-in:nth-child(2) { transition-delay: 0.2s; }
+      .fade-in:nth-child(3) { transition-delay: 0.3s; }
+      .fade-in:nth-child(4) { transition-delay: 0.4s; }
+      .fade-in:nth-child(5) { transition-delay: 0.5s; }
+    </style>
   </head>
-  <body class="bg-[#0a0a0a] text-white">
+  <body class="bg-[#FAFAFA] dark:bg-[#0F1419] text-[#1A1A1A] dark:text-[#E4E6EB] font-['Inter',sans-serif] antialiased transition-colors">
     <slot />
+
+    <script>
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements with fade-in class
+      document.addEventListener('DOMContentLoaded', () => {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        fadeElements.forEach(el => observer.observe(el));
+      });
+    </script>
   </body>
 </html>
