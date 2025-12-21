@@ -99,7 +99,7 @@
           <div>
             <h4 class="text-xl font-bold mb-3 dark:text-[#E4E6EB]" data-i18n="about.experience.title">Experiencia Real</h4>
             <p class="text-[#6B7280] dark:text-[#9CA3AF] leading-relaxed" data-i18n-template="about.experience.desc">
-              Actualmente desarrollando soluciones fintech en <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Helipagos</span>,
+              Actualmente desarrollando soluciones fintech en <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold hover:text-[#6366F1] dark:hover:text-[#6366F1] transition-colors">Helipagos</a>,
               donde implemento features críticas que impactan a miles de usuarios diariamente
             </p>
           </div>
@@ -167,7 +167,7 @@
 
   function getCurrentLanguage(): Language {
     const saved = localStorage.getItem('language');
-    return (saved === 'en' || saved === 'es') ? saved : 'es';
+    return (saved === 'en' || saved === 'es' || saved === 'et') ? saved : 'es';
   }
 
   function updateAboutTranslations() {
@@ -181,10 +181,15 @@
           Transformo <span class="text-[#6366F1]">ideas</span> en<br/>
           experiencias móviles <span class="text-[#6366F1]">excepcionales</span>
         `;
-      } else {
+      } else if (lang === 'en') {
         headline.innerHTML = `
           Transforming <span class="text-[#6366F1]">ideas</span><br/>
           into <span class="text-[#6366F1]">exceptional</span> mobile experiences
+        `;
+      } else if (lang === 'et') {
+        headline.innerHTML = `
+          Muudan <span class="text-[#6366F1]">ideed</span><br/>
+          erakordseteks mobiililahendusteks
         `;
       }
     }
@@ -197,10 +202,15 @@
           Desarrollador Android con <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">experiencia en fintech</span>,
           especializado en crear aplicaciones escalables con arquitectura limpia
         `;
-      } else {
+      } else if (lang === 'en') {
         subtitle.innerHTML = `
           Android Developer with <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">fintech experience</span>,
           specialized in building scalable applications with clean architecture
+        `;
+      } else if (lang === 'et') {
+        subtitle.innerHTML = `
+          Android arendaja <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">fintech kogemusega</span>,
+          spetsialiseerunud skaleeritavate rakenduste loomisele puhta arhitektuuriga
         `;
       }
     }
@@ -210,13 +220,18 @@
     if (experienceDesc) {
       if (lang === 'es') {
         experienceDesc.innerHTML = `
-          Actualmente desarrollando soluciones fintech en <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Helipagos</span>,
+          Actualmente desarrollando soluciones fintech en <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold hover:text-[#6366F1] dark:hover:text-[#6366F1] transition-colors">Helipagos</a>,
           donde implemento features críticas que impactan a miles de usuarios diariamente
         `;
-      } else {
+      } else if (lang === 'en') {
         experienceDesc.innerHTML = `
-          Currently developing fintech solutions at <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Helipagos</span>,
+          Currently developing fintech solutions at <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold hover:text-[#6366F1] dark:hover:text-[#6366F1] transition-colors">Helipagos</a>,
           where I implement critical features impacting thousands of users daily
+        `;
+      } else if (lang === 'et') {
+        experienceDesc.innerHTML = `
+          Hetkel arendan fintech lahendusi <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold hover:text-[#6366F1] dark:hover:text-[#6366F1] transition-colors">Helipagos</a>,
+          kus implementeerin kriitilisi funktsioone, mis mõjutavad tuhandeid kasutajaid iga päev
         `;
       }
     }
@@ -230,11 +245,17 @@
           <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">MVVM</span>,
           garantizando código robusto, testeado y fácil de mantener
         `;
-      } else {
+      } else if (lang === 'en') {
         qualityDesc.innerHTML = `
           <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Clean Architecture</span> and
           <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">MVVM</span>,
           ensuring robust, tested, and easy-to-maintain code
+        `;
+      } else if (lang === 'et') {
+        qualityDesc.innerHTML = `
+          <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Clean Architecture</span> ja
+          <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">MVVM</span>,
+          tagades tugeva, testitud ja hõlpsasti hooldatava koodi
         `;
       }
     }

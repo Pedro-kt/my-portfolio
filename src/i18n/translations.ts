@@ -6,6 +6,7 @@ export const translations = {
     'header.stack': 'Stack',
     'header.studies': 'Formación',
     'header.projects': 'Proyectos',
+    'header.certifications': 'Certificaciones',
     'header.contact': 'Contacto',
 
     // Hero
@@ -145,6 +146,25 @@ export const translations = {
     'techstack.api': 'API & NETWORKING',
     'techstack.tools': 'HERRAMIENTAS',
 
+    // Certifications
+    'certifications.title': 'Certificaciones',
+    'certifications.subtitle': 'Certificados que validan mis conocimientos y habilidades',
+    'certifications.badge.verified': 'Verificado',
+    'certifications.badge.comingsoon': 'Próximamente',
+    'certifications.jetpack.title': 'Jetpack Compose for Android Developers',
+    'certifications.jetpack.issuer': 'Udemy',
+    'certifications.jetpack.date': 'Diciembre 2025',
+    'certifications.jetpack.description': 'Certificación completa en Jetpack Compose, cubriendo UI moderna, estado, navegación y mejores prácticas para desarrollo Android',
+    'certifications.view': 'Ver certificado',
+    'certifications.english.title': 'Certificación de Inglés',
+    'certifications.english.issuer': 'Por confirmar',
+    'certifications.english.date': 'Próximamente',
+    'certifications.english.description': 'Certificación de dominio del idioma inglés',
+    'certifications.estonian.title': 'Certificación de Estonio',
+    'certifications.estonian.issuer': 'Keeleklikk',
+    'certifications.estonian.date': 'Próximamente',
+    'certifications.estonian.description': 'Certificación de dominio del idioma estonio A2',
+
     // Contact
     'contact.title': 'Contacto',
     'contact.subtitle': '¿Tienes un proyecto en mente? ¡Hablemos!',
@@ -172,6 +192,7 @@ export const translations = {
     'header.stack': 'Stack',
     'header.studies': 'Education',
     'header.projects': 'Projects',
+    'header.certifications': 'Certifications',
     'header.contact': 'Contact',
 
     // Hero
@@ -311,6 +332,25 @@ export const translations = {
     'techstack.api': 'API & NETWORKING',
     'techstack.tools': 'TOOLS',
 
+    // Certifications
+    'certifications.title': 'Certifications',
+    'certifications.subtitle': 'Certificates that validate my knowledge and skills',
+    'certifications.badge.verified': 'Verified',
+    'certifications.badge.comingsoon': 'Coming soon',
+    'certifications.jetpack.title': 'Jetpack Compose for Android Developers',
+    'certifications.jetpack.issuer': 'Udemy',
+    'certifications.jetpack.date': 'December 2025',
+    'certifications.jetpack.description': 'Complete certification in Jetpack Compose, covering modern UI, state, navigation and best practices for Android development',
+    'certifications.view': 'View certificate',
+    'certifications.english.title': 'English Certification',
+    'certifications.english.issuer': 'To be confirmed',
+    'certifications.english.date': 'Coming soon',
+    'certifications.english.description': 'English language proficiency certification',
+    'certifications.estonian.title': 'Estonian Certification',
+    'certifications.estonian.issuer': 'Keeleklikk',
+    'certifications.estonian.date': 'Coming soon',
+    'certifications.estonian.description': 'Estonian A2 language proficiency certification',
+
     // Contact
     'contact.title': 'Contact',
     'contact.subtitle': 'Have a project in mind? Let\'s talk!',
@@ -330,6 +370,192 @@ export const translations = {
     // Footer
     'footer.rights': 'All rights reserved',
     'footer.built': 'Built with',
+  },
+  et: {
+    // Header
+    'header.about': 'Minust',
+    'header.experience': 'Kogemus',
+    'header.stack': 'Tehniline pakett',
+    'header.studies': 'Haridus',
+    'header.projects': 'Projektid',
+    'header.certifications': 'Sertifikaadid',
+    'header.contact': 'Kontakt',
+
+    // Hero
+    'hero.greeting': '👋 Tere, mina olen',
+    'hero.role': 'Android arendaja',
+    'hero.description': 'Spetsialiseerunud {kotlin} ja {compose} kasutamisele. Hetkel töötan {helipagos}, luues uuenduslikke fintech lahendusi.',
+    'hero.location': 'Posadas, Misiones, Argentina',
+    'hero.cta.contact': 'Võta ühendust',
+    'hero.cta.download': 'Laadi alla CV',
+
+    // Feature Cards
+    'hero.feature.mobile.title': 'Mobile First',
+    'hero.feature.mobile.desc': 'Natiivne Android arendus kõige uuemate tehnoloogiatega',
+    'hero.feature.clean.title': 'Puhas kood',
+    'hero.feature.clean.desc': 'Puhas ja hooldatav kood',
+    'hero.feature.tech.title': 'Parimad tehnoloogiad',
+    'hero.feature.tech.desc': 'Kotlin ja Jetpack Compose',
+
+    // About
+    'about.badge': 'Minust',
+    'about.headline.part1': 'Muudan',
+    'about.headline.ideas': 'ideed',
+    'about.headline.part2': '',
+    'about.headline.part3': 'erakordseteks mobiililahendusteks',
+    'about.headline.exceptional': '',
+    'about.subtitle': 'Android arendaja {fintech}, spetsialiseerunud skaleeritavate rakenduste loomisele puhta arhitektuuriga',
+    'about.subtitle.fintech': 'fintech kogemusega',
+
+    'about.card1.title': 'Kes ma olen',
+    'about.card1.desc': 'Android arendaja ja tarkvaraarenduse tudeng, kellel on kirg tehnoloogiliste uuenduste vastu',
+
+    'about.card2.title': 'Millega ma töötan',
+    'about.card2.item1': 'Kotlin ja Jetpack Compose',
+    'about.card2.item2': 'Clean Architecture ja MVVM',
+    'about.card2.item3': 'Firebase ja Room andmebaas',
+
+    'about.card3.title': 'Mida ma pakun',
+    'about.card3.item1': 'Skaleeritavad ja tugevad rakendused',
+    'about.card3.item2': 'Puhas ja hooldatav kood',
+    'about.card3.item3': 'Moodne ja sujuv UX',
+
+    'about.experience.title': 'Reaalne kogemus',
+    'about.experience.desc': 'Hetkel arendan fintech lahendusi {helipagos}, kus implementeerin kriitilisi funktsioone, mis mõjutavad tuhandeid kasutajaid iga päev',
+
+    'about.quality.title': 'Kvaliteedikeskne',
+    'about.quality.desc': '{clean} ja {mvvm}, tagades tugeva, testitud ja hõlpsasti hooldatava koodi',
+
+    'about.stack.label': 'Peamine tehnoloogiline pakett',
+
+    // Experience
+    'experience.title': 'Kogemus',
+    'experience.subtitle': 'Minu professionaalne teekond mobiiliarenduses',
+    'experience.role': 'Mobiiliarendaja',
+    'experience.company': 'Helipagos',
+    'experience.industry': 'Fintech',
+    'experience.period': 'November 2025 - Praegu',
+    'experience.status': 'Aktiivne',
+    'experience.description': 'Natiivse mobiilirakenduse arendamine ja hooldamine Androidile fintech sektoris. Digitaalsete maksete funktsioonide implementeerimine, integratsioonid finantsteenuste API-dega, kasutajaliidese arendamine järgides häid põhimõtteid ja vastutusi. Samuti pankade turvastandardite rakendamine ja kolmandate osapoolte SDK-de haldamine.',
+
+    'experience.resp1.title': 'Natiivne arendus',
+    'experience.resp1.desc': 'Android rakendus Kotlin ja Jetpack Compose abil',
+    'experience.resp2.title': 'API integratsioon',
+    'experience.resp2.desc': 'Finantsteenused, digitaalsed maksed ja koostöö backend meeskondadega',
+    'experience.resp3.title': 'UI/UX disain',
+    'experience.resp3.desc': 'Koostöö disainitiimiga UI/UX arendamisel',
+    'experience.resp4.title': 'Turvalisus',
+    'experience.resp4.desc': 'Pankade standardite rakendamine',
+
+    'experience.tech.label': 'Kasutatud tehnoloogiad',
+    'experience.tech.sdks': 'Kolmandate osapoolte SDK-d',
+
+    // Studies
+    'studies.title': 'Haridus',
+    'studies.subtitle': 'Minu pidev õppimise teekond',
+
+    // Self-taught
+    'studies.android.title': 'Android arendus',
+    'studies.android.type': 'Iseõppija',
+    'studies.android.period': '2024 - Praegu',
+    'studies.android.description': 'Pidev kaasaegse Android arenduse õppimine Kotlini, Jetpack Compose ja praeguste teekidega. Funktsionaalsete projektide loomine, integreerides Firebase, RESTful API-d ja järgides arhitektuuri parimaid tavasid.',
+    'studies.android.skill1': 'Kotlin ja Jetpack Compose',
+    'studies.android.skill2': 'Firebase ja RESTful API-d',
+    'studies.android.skill3': 'MVVM ja Clean Architecture',
+
+    // Technical Degree
+    'studies.tech.title': 'Kõrgem tehniline kraad',
+    'studies.tech.subtitle': 'Tarkvaraarendus',
+    'studies.tech.period': '2024 - 2026',
+    'studies.tech.institution': 'Instituto Superior Roque Gonzalez',
+    'studies.tech.description': 'Põhjalik koolitus tarkvaraarenduses, andmebaasides, objektorienteeritud programmeerimises, andmestruktuurides, agiilsetes metoodikates (Scrum) ja koostööpõhises töös meeskonnaprojektides.',
+    'studies.tech.skill1': 'Objektorienteeritud programmeerimine',
+    'studies.tech.skill2': 'Andmebaasid ja SQL',
+    'studies.tech.skill3': 'Agiilsed metoodikad (Scrum)',
+
+    // Projects
+    'projects.title': 'Projektid',
+    'projects.subtitle': 'Rakendus, mis näitab minu Android arenduse oskusi',
+    'projects.more': 'Rohkem projekte tulekul...',
+
+    // SeijakuList Project
+    'projects.seijaku.period': 'Mai 2025 - Praegu',
+    'projects.seijaku.status': 'Arenduses',
+    'projects.seijaku.description': 'Anime ajaloo haldamise rakendus, mis on loodud {kotlin} ja {compose} abil. Kasutab Jikan REST API uute pealkirjade avastamiseks, implementeerib {mvvm} ja {clean}, {room} kohaliku püsivuse jaoks ja {coroutines} asünkroonsete operatsioonide jaoks.',
+    'projects.seijaku.tech': 'Kasutatud tehnoloogiad',
+    'projects.seijaku.details': 'Vaata detaile',
+    'projects.seijaku.demo': 'Demo',
+
+    // SeijakuList Modal
+    'projects.seijaku.modal.subtitle': 'Android anime haldamise rakendus',
+    'projects.seijaku.modal.summary.title': 'Projekti kokkuvõte',
+    'projects.seijaku.modal.summary.description': 'SeijakuList on mobiilne anime ajaloo haldamise rakendus, mis on loodud Android platvormile, keskendudes kaasaegse arhitektuuri kasutamisele ({clean} ja {mvvm}). Kasutab Jikan API andmete jaoks ja Room kasutaja nimekirja kohalikuks salvestamiseks.',
+    'projects.seijaku.modal.tech.title': 'Tehnoloogia ja arhitektuur',
+    'projects.seijaku.modal.tech.key': 'Põhiline tehnoloogiline pakett',
+    'projects.seijaku.modal.tech.lang': 'Keel ja UI: {kotlin} ja {compose}',
+    'projects.seijaku.modal.tech.arch': 'Arhitektuur: {clean} ja {mvvm}',
+    'projects.seijaku.modal.tech.di': 'Sõltuvuste süstimine: {hilt}',
+    'projects.seijaku.modal.tech.data': 'Andmed ja backend',
+    'projects.seijaku.modal.tech.api': 'Väline API: {jikan}',
+    'projects.seijaku.modal.tech.db': 'Kohalik püsivus: {room} (SQLite)',
+    'projects.seijaku.modal.tech.async': 'Asünkroonsus: {coroutines} ja {retrofit}',
+    'projects.seijaku.modal.tech.baas': 'BaaS: {firebase} (Auth, Storage, Firestore, Crashlytics)',
+    'projects.seijaku.modal.gallery.title': 'Ekraanipildid',
+    'projects.seijaku.modal.gallery.home': 'Avaleht',
+    'projects.seijaku.modal.gallery.detail': 'Detail',
+    'projects.seijaku.modal.gallery.mylist': 'Minu animed',
+    'projects.seijaku.modal.gallery.search': 'Otsing',
+    'projects.seijaku.modal.btn.github': 'Vaata GitHubis',
+    'projects.seijaku.modal.btn.demo': 'Vaata demo',
+
+    // Tech Stack
+    'techstack.title': 'Tehnoloogiline pakett',
+    'techstack.subtitle': 'Tehnoloogiad ja tööriistad, millega ma töötan',
+    'techstack.languages': 'KEELED',
+    'techstack.uiux': 'UI/UX',
+    'techstack.architecture': 'ARHITEKTUUR',
+    'techstack.database': 'ANDMEBAAS',
+    'techstack.api': 'API JA VÕRK',
+    'techstack.tools': 'TÖÖRIISTAD',
+
+    // Certifications
+    'certifications.title': 'Sertifikaadid',
+    'certifications.subtitle': 'Sertifikaadid, mis kinnitavad minu teadmisi ja oskusi',
+    'certifications.badge.verified': 'Kinnitatud',
+    'certifications.badge.comingsoon': 'Tulekul',
+    'certifications.jetpack.title': 'Jetpack Compose for Android Developers',
+    'certifications.jetpack.issuer': 'Udemy',
+    'certifications.jetpack.date': 'Detsember 2025',
+    'certifications.jetpack.description': 'Täielik sertifikaat Jetpack Compose-is, hõlmates kaasaegset UI-d, olekut, navigeerimist ja parimaid tavasid Android arenduses',
+    'certifications.view': 'Vaata sertifikaati',
+    'certifications.english.title': 'Inglise keele sertifikaat',
+    'certifications.english.issuer': 'Kinnitamisel',
+    'certifications.english.date': 'Tulekul',
+    'certifications.english.description': 'Inglise keele oskuse sertifikaat',
+    'certifications.estonian.title': 'Eesti keele sertifikaat',
+    'certifications.estonian.issuer': 'Keeleklikk',
+    'certifications.estonian.date': 'Tulekul',
+    'certifications.estonian.description': 'Eesti keele oskuse sertifikaat A2',
+
+    // Contact
+    'contact.title': 'Kontakt',
+    'contact.subtitle': 'Kas teil on projekt plaanis? Räägime!',
+    'contact.name': 'Nimi',
+    'contact.name.placeholder': 'Teie täisnimi',
+    'contact.email': 'E-post',
+    'contact.email.placeholder': 'teie@email.com',
+    'contact.message': 'Sõnum',
+    'contact.message.placeholder': 'Rääkige mulle oma projektist...',
+    'contact.send': 'Saada sõnum',
+    'contact.sending': 'Saadan...',
+    'contact.success': 'Tänan! Teie sõnum saadeti edukalt. Võtan teiega peagi ühendust.',
+    'contact.error': 'Sõnumi saatmisel tekkis viga. Palun proovige uuesti.',
+    'contact.info.title': 'Kontaktinfo',
+    'contact.info.description': 'Avatud uutele võimalustele ja koostööle. Võtke julgelt ühendust.',
+
+    // Footer
+    'footer.rights': 'Kõik õigused kaitstud',
+    'footer.built': 'Loodud',
   }
 };
 

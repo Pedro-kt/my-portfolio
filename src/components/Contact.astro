@@ -144,7 +144,7 @@
   // Get current language from localStorage
   function getCurrentLanguage(): Language {
     const saved = localStorage.getItem('language');
-    return (saved === 'en' || saved === 'es') ? saved : 'es';
+    return (saved === 'en' || saved === 'es' || saved === 'et') ? saved : 'es';
   }
 
   // Update placeholders

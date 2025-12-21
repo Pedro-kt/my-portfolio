@@ -5,7 +5,7 @@ import type { Language } from './translations';
 const getInitialLanguage = (): Language => {
   if (typeof window !== 'undefined') {
     const saved = localStorage.getItem('language');
-    if (saved === 'en' || saved === 'es') {
+    if (saved === 'en' || saved === 'es' || saved === 'et') {
       return saved;
     }
   }
@@ -24,5 +24,8 @@ export function setLanguage(lang: Language) {
 
 export function toggleLanguage() {
   const current = currentLanguage.get();
-  setLanguage(current === 'es' ? 'en' : 'es');
+  const languages: Language[] = ['es', 'en', 'et'];
+  const currentIndex = languages.indexOf(current);
+  const nextIndex = (currentIndex + 1) % languages.length;
+  setLanguage(languages[nextIndex]);
 }

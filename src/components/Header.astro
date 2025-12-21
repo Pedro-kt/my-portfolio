@@ -53,6 +53,13 @@
         </li>
         <li>
           <a
+            href="#certifications"
+            class="text-[#6B7280] hover:text-[#6366F1] transition-colors nav-link"
+            data-i18n="header.certifications">Certificaciones</a
+          >
+        </li>
+        <li>
+          <a
             href="#contact"
             class="text-[#6B7280] hover:text-[#6366F1] transition-colors nav-link"
             data-i18n="header.contact"
@@ -65,11 +72,11 @@
       <!-- Language Toggle (Desktop) -->
       <button
         id="language-toggle"
-        class="w-10 h-10 rounded-xl bg-[#F9FAFB] dark:bg-[#2D3748] border-2 border-[#E5E7EB] dark:border-[#2D3748] flex items-center justify-center hover:border-[#6366F1] dark:hover:border-[#6366F1] transition-all group"
+        class="w-10 h-10 rounded-xl bg-[#F9FAFB] dark:bg-[#2D3748] border-2 border-[#E5E7EB] dark:border-[#2D3748] flex items-center justify-center hover:border-[#6366F1] dark:hover:border-[#6366F1] transition-all"
         aria-label="Toggle language"
         title="Change language"
       >
-        <span class="text-sm font-bold text-[#6B7280] dark:text-[#9CA3AF] group-hover:text-[#6366F1] transition-colors" id="lang-text">ES</span>
+        <span id="lang-text" class="text-sm font-semibold text-[#6366F1]">ES</span>
       </button>
 
       <!-- Dark Mode Toggle (Desktop) -->
@@ -94,10 +101,10 @@
       <!-- Language Toggle (Mobile) -->
       <button
         id="language-toggle-mobile"
-        class="w-10 h-10 rounded-xl bg-[#F9FAFB] dark:bg-[#2D3748] border-2 border-[#E5E7EB] dark:border-[#2D3748] flex items-center justify-center hover:border-[#6366F1] dark:hover:border-[#6366F1] transition-all group"
+        class="w-10 h-10 rounded-xl bg-[#F9FAFB] dark:bg-[#2D3748] border-2 border-[#E5E7EB] dark:border-[#2D3748] flex items-center justify-center hover:border-[#6366F1] dark:hover:border-[#6366F1] transition-all"
         aria-label="Toggle language"
       >
-        <span class="text-sm font-bold text-[#6B7280] dark:text-[#9CA3AF] group-hover:text-[#6366F1] transition-colors lang-text-mobile">ES</span>
+        <span id="lang-text-mobile" class="text-sm font-semibold text-[#6366F1]">ES</span>
       </button>
 
       <!-- Dark Mode Toggle (Mobile) -->
@@ -168,6 +175,13 @@
         </li>
         <li>
           <a
+            href="#certifications"
+            class="text-[#6B7280] hover:text-[#6366F1] transition-colors nav-link"
+            data-i18n="header.certifications">Certificaciones</a
+          >
+        </li>
+        <li>
+          <a
             href="#contact"
             class="text-[#6B7280] hover:text-[#6366F1] transition-colors nav-link"
             data-i18n="header.contact"
@@ -196,12 +210,12 @@
     const sunIconsMobile = document.querySelectorAll(".sun-icon");
     const moonIconsMobile = document.querySelectorAll(".moon-icon");
     const langText = document.getElementById("lang-text");
-    const langTextMobile = document.querySelector(".lang-text-mobile");
+    const langTextMobile = document.getElementById("lang-text-mobile");
 
     // Get current language from localStorage
     function getCurrentLanguage(): Language {
       const saved = localStorage.getItem('language');
-      return (saved === 'en' || saved === 'es') ? saved : 'es';
+      return (saved === 'en' || saved === 'es' || saved === 'et') ? saved : 'es';
     }
 
     // Update language button text
@@ -227,7 +241,10 @@
     // Toggle language
     function toggleLanguage() {
       const current = getCurrentLanguage();
-      const newLang = current === 'es' ? 'en' : 'es';
+      const languages: Language[] = ['es', 'en', 'et'];
+      const currentIndex = languages.indexOf(current);
+      const nextIndex = (currentIndex + 1) % languages.length;
+      const newLang = languages[nextIndex];
       localStorage.setItem('language', newLang);
       document.documentElement.lang = newLang;
       updateLanguageButtons();

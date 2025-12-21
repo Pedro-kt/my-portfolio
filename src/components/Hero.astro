@@ -40,7 +40,7 @@
             <span data-i18n-template="hero.description">
               Especializado en <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Kotlin</span> y
               <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Jetpack Compose</span>.
-              Actualmente trabajando en <span class="font-bold text-[#6366F1]">Helipagos</span>,
+              Actualmente trabajando en <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="font-bold text-[#6366F1] hover:text-[#4F46E5] transition-colors">Helipagos</a>,
               creando soluciones fintech innovadoras.
             </span>
           </p>
@@ -146,7 +146,7 @@
 
   function getCurrentLanguage(): Language {
     const saved = localStorage.getItem('language');
-    return (saved === 'en' || saved === 'es') ? saved : 'es';
+    return (saved === 'en' || saved === 'es' || saved === 'et') ? saved : 'es';
   }
 
   function updateHeroDescription() {
@@ -158,15 +158,22 @@
         descElement.innerHTML = `
           Especializado en <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Kotlin</span> y
           <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Jetpack Compose</span>.
-          Actualmente trabajando en <span class="font-bold text-[#6366F1]">Helipagos</span>,
+          Actualmente trabajando en <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="font-bold text-[#6366F1] hover:text-[#4F46E5] transition-colors">Helipagos</a>,
           creando soluciones fintech innovadoras.
         `;
-      } else {
+      } else if (lang === 'en') {
         descElement.innerHTML = `
           Specialized in <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Kotlin</span> and
           <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Jetpack Compose</span>.
-          Currently working at <span class="font-bold text-[#6366F1]">Helipagos</span>,
+          Currently working at <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="font-bold text-[#6366F1] hover:text-[#4F46E5] transition-colors">Helipagos</a>,
           building innovative fintech solutions.
+        `;
+      } else if (lang === 'et') {
+        descElement.innerHTML = `
+          Spetsialiseerunud <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Kotlin</span> ja
+          <span class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB]">Jetpack Compose</span> kasutamisele.
+          Hetkel töötan <a href="https://www.linkedin.com/company/helipagos/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="font-bold text-[#6366F1] hover:text-[#4F46E5] transition-colors">Helipagos</a>,
+          luues uuenduslikke fintech lahendusi.
         `;
       }
     }
