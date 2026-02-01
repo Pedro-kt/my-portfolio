@@ -16,131 +16,103 @@ const lang = 'es'; // Default language for SSR
     </div>
 
     <!-- Certifications Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Jetpack Compose Certification -->
-      <div class="group bg-[#F9FAFB] dark:bg-[#1A1F2E] rounded-2xl border-2 border-[#E5E7EB] dark:border-[#2D3748] hover:border-[#6366F1] dark:hover:border-[#6366F1] transition-all overflow-hidden">
-        <!-- Certificate Image -->
-        <div class="relative overflow-hidden bg-white dark:bg-[#0F1419]">
-          <img
-            src="/images/certifications/jetpack-certification.jpeg"
-            alt="Jetpack Compose Certification"
-            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-          <div class="absolute top-3 right-3 bg-[#6366F1] text-white px-3 py-1 rounded-full text-xs font-semibold" data-i18n="certifications.badge.verified">
-            Verificado
-          </div>
-        </div>
+<div class="grid md:grid-cols-2 gap-10">
 
-        <!-- Certificate Info -->
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 dark:text-[#E4E6EB]" data-i18n="certifications.jetpack.title">
-            Jetpack Compose for Android Developers
-          </h3>
+  <!-- Real Certifications -->
+  <div>
+    <h3 class="text-xl font-semibold mb-6 dark:text-[#E4E6EB]">
+      Certificaciones
+    </h3>
 
-          <div class="flex items-center gap-2 text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-3">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-            </svg>
-            <span data-i18n="certifications.jetpack.issuer">Udemy</span>
-          </div>
+    <div class="group bg-[#F9FAFB] dark:bg-[#1A1F2E] rounded-2xl border-2 border-[#E5E7EB] dark:border-[#2D3748] hover:border-[#6366F1] transition-all overflow-hidden">
 
-          <div class="flex items-center gap-2 text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            <span data-i18n="certifications.jetpack.date">Diciembre 2025</span>
-          </div>
-
-          <p class="text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4" data-i18n="certifications.jetpack.description">
-            Certificación completa en Jetpack Compose, cubriendo UI moderna, estado, navegación y mejores prácticas para desarrollo Android
-          </p>
-
-          <a
-            href="http://ude.my//UC-1acda8cb-bcd9-4cd2-a197-4a4c46ae793d"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#4F46E5] font-medium transition-colors"
-          >
-            <span data-i18n="certifications.view">Ver certificado</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </a>
+      <!-- Image -->
+      <div class="relative overflow-hidden bg-white dark:bg-[#0F1419]">
+        <img
+          src="/images/certifications/jetpack-certification.jpeg"
+          alt="Jetpack Compose Certification"
+          class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+        <div class="absolute top-3 right-3 bg-[#6366F1] text-white px-3 py-1 rounded-full text-xs font-semibold" data-i18n="certifications.badge.verified">
+          Verificado
         </div>
       </div>
 
-      <!-- English Certification (Coming Soon) -->
-      <div class="group bg-[#F9FAFB] dark:bg-[#1A1F2E] rounded-2xl border-2 border-[#E5E7EB] dark:border-[#2D3748] transition-all overflow-hidden opacity-60">
-        <div class="relative overflow-hidden bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] h-48 flex items-center justify-center">
-          <svg class="w-20 h-20 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-          </svg>
-          <div class="absolute top-3 right-3 bg-[#F59E0B] text-white px-3 py-1 rounded-full text-xs font-semibold" data-i18n="certifications.badge.comingsoon">
-            Próximamente
-          </div>
-        </div>
+      <!-- Info -->
+      <div class="p-5">
+        <h4 class="text-lg font-bold mb-2 dark:text-[#E4E6EB]" data-i18n="certifications.jetpack.title">
+          Jetpack Compose for Android Developers
+        </h4>
 
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 dark:text-[#E4E6EB]" data-i18n="certifications.english.title">
-            Certificación de Inglés
-          </h3>
+        <p class="text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-3">
+          <span data-i18n="certifications.jetpack.issuer">Udemy</span> · 
+          <span data-i18n="certifications.jetpack.date">Diciembre 2025</span>
+        </p>
 
-          <div class="flex items-center gap-2 text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-3">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-            </svg>
-            <span data-i18n="certifications.english.issuer">Por confirmar</span>
-          </div>
+        <p class="text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4" data-i18n="certifications.jetpack.description">
+          Certificación en Jetpack Compose, UI moderna, estado, navegación y buenas prácticas de Android.
+        </p>
 
-          <div class="flex items-center gap-2 text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            <span data-i18n="certifications.english.date">Próximamente</span>
-          </div>
-
-          <p class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="certifications.english.description">
-            Certificación de dominio del idioma inglés
-          </p>
-        </div>
-      </div>
-
-      <!-- Estonian Certification (Coming Soon) -->
-      <div class="group bg-[#F9FAFB] dark:bg-[#1A1F2E] rounded-2xl border-2 border-[#E5E7EB] dark:border-[#2D3748] transition-all overflow-hidden opacity-60">
-        <div class="relative overflow-hidden bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] h-48 flex items-center justify-center">
-          <svg class="w-20 h-20 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-          </svg>
-          <div class="absolute top-3 right-3 bg-[#F59E0B] text-white px-3 py-1 rounded-full text-xs font-semibold" data-i18n="certifications.badge.comingsoon">
-            Próximamente
-          </div>
-        </div>
-
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 dark:text-[#E4E6EB]" data-i18n="certifications.estonian.title">
-            Certificación de Estonio
-          </h3>
-
-          <div class="flex items-center gap-2 text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-3">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-            </svg>
-            <span data-i18n="certifications.estonian.issuer">Por confirmar</span>
-          </div>
-
-          <div class="flex items-center gap-2 text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            <span data-i18n="certifications.estonian.date">Próximamente</span>
-          </div>
-
-          <p class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="certifications.estonian.description">
-            Certificación de dominio del idioma estonio
-          </p>
-        </div>
+        <a
+          href="http://ude.my//UC-1acda8cb-bcd9-4cd2-a197-4a4c46ae793d"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-[#6366F1] hover:text-[#4F46E5]"
+        >
+          <span data-i18n="certifications.view">Ver certificado</span> →
+        </a>
       </div>
     </div>
+  </div>
+
+  <!-- Currently Learning -->
+  <div>
+    <h3 class="text-xl font-semibold mb-6 dark:text-[#E4E6EB]">
+      En aprendizaje
+    </h3>
+
+    <div class="space-y-4">
+
+      <div class="bg-[#F9FAFB] dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-xl p-4 flex items-center justify-between">
+        <span class="text-sm font-medium dark:text-[#E4E6EB]">
+          Flutter
+        </span>
+        <span class="text-xs text-[#F59E0B] font-semibold">
+          Learning
+        </span>
+      </div>
+
+      <div class="bg-[#F9FAFB] dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-xl p-4 flex items-center justify-between">
+        <span class="text-sm font-medium dark:text-[#E4E6EB]">
+          Kotlin Multiplatform (KMP)
+        </span>
+        <span class="text-xs text-[#F59E0B] font-semibold">
+          Learning
+        </span>
+      </div>
+
+      <div class="bg-[#F9FAFB] dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-xl p-4 flex items-center justify-between">
+        <span class="text-sm font-medium dark:text-[#E4E6EB]" data-i18n="certifications.english.title">
+          Certificación de Inglés
+        </span>
+        <span class="text-xs text-[#F59E0B] font-semibold">
+          Learning
+        </span>
+      </div>
+
+      <div class="bg-[#F9FAFB] dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-xl p-4 flex items-center justify-between">
+        <span class="text-sm font-medium dark:text-[#E4E6EB]" data-i18n="certifications.estonian.title">
+          Certificación de Estonio
+        </span>
+        <span class="text-xs text-[#F59E0B] font-semibold">
+          Learning
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
   </div>
 </section>
 
