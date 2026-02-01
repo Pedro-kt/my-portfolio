@@ -135,6 +135,15 @@ export const translations = {
     'projects.seijaku.modal.gallery.search': 'Búsqueda',
     'projects.seijaku.modal.btn.github': 'Ver en GitHub',
     'projects.seijaku.modal.btn.demo': 'Ver Demo',
+    'projects.seijaku.modal.features.title': 'Características Principales',
+    'projects.seijaku.modal.features.management.title': 'Gestión Completa',
+    'projects.seijaku.modal.features.management.desc': 'Organizá por estados: Viendo, Completado, Pendiente, En Espera',
+    'projects.seijaku.modal.features.search.title': 'Búsqueda Intuitiva',
+    'projects.seijaku.modal.features.search.desc': 'Buscá animes, mangas, personajes y estudios fácilmente',
+    'projects.seijaku.modal.features.cloud.title': 'Sincronización Cloud',
+    'projects.seijaku.modal.features.cloud.desc': 'Tu progreso guardado y sincronizado entre dispositivos',
+    'projects.seijaku.modal.features.achievements.title': 'Sistema de Logros',
+    'projects.seijaku.modal.features.achievements.desc': 'Desbloqueá logros y demostrá tu pasión por el anime',
 
     // Tech Stack
     'techstack.title': 'Stack Tecnológico',
@@ -321,6 +330,15 @@ export const translations = {
     'projects.seijaku.modal.gallery.search': 'Search',
     'projects.seijaku.modal.btn.github': 'View on GitHub',
     'projects.seijaku.modal.btn.demo': 'View Demo',
+    'projects.seijaku.modal.features.title': 'Key Features',
+    'projects.seijaku.modal.features.management.title': 'Complete Management',
+    'projects.seijaku.modal.features.management.desc': 'Organize by status: Watching, Completed, Pending, On Hold',
+    'projects.seijaku.modal.features.search.title': 'Intuitive Search',
+    'projects.seijaku.modal.features.search.desc': 'Easily search for anime, manga, characters and studios',
+    'projects.seijaku.modal.features.cloud.title': 'Cloud Sync',
+    'projects.seijaku.modal.features.cloud.desc': 'Your progress saved and synced across devices',
+    'projects.seijaku.modal.features.achievements.title': 'Achievement System',
+    'projects.seijaku.modal.features.achievements.desc': 'Unlock achievements and show your passion for anime',
 
     // Tech Stack
     'techstack.title': 'Tech Stack',
@@ -507,6 +525,15 @@ export const translations = {
     'projects.seijaku.modal.gallery.search': 'Otsing',
     'projects.seijaku.modal.btn.github': 'Vaata GitHubis',
     'projects.seijaku.modal.btn.demo': 'Vaata demo',
+    'projects.seijaku.modal.features.title': 'Põhifunktsioonid',
+    'projects.seijaku.modal.features.management.title': 'Täielik haldamine',
+    'projects.seijaku.modal.features.management.desc': 'Korralda staatuse järgi: Vaatan, Lõpetatud, Ootel, Peatatud',
+    'projects.seijaku.modal.features.search.title': 'Intuitiivne otsing',
+    'projects.seijaku.modal.features.search.desc': 'Otsi hõlpsalt animesid, mangasid, tegelasi ja stuudioid',
+    'projects.seijaku.modal.features.cloud.title': 'Pilve sünkroniseerimine',
+    'projects.seijaku.modal.features.cloud.desc': 'Sinu progress salvestatud ja sünkroniseeritud seadmete vahel',
+    'projects.seijaku.modal.features.achievements.title': 'Saavutuste süsteem',
+    'projects.seijaku.modal.features.achievements.desc': 'Ava saavutusi ja näita oma kirge anime vastu',
 
     // Tech Stack
     'techstack.title': 'Tehnoloogiline pakett',

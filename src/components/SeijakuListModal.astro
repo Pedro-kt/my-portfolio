@@ -1,229 +1,201 @@
 <div
   id="seijaku-modal"
-  class="hidden fixed inset-0 z-[9999] bg-black/60 dark:bg-black/80 backdrop-blur-sm"
+  class="hidden fixed inset-0 z-[9999] bg-black/70 dark:bg-black/85 backdrop-blur-md"
   aria-labelledby="modal-title"
   role="dialog"
   aria-modal="true"
 >
   <div class="fixed inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-8 overflow-y-auto">
     <div
-      class="relative w-full max-w-6xl my-8 transform rounded-3xl bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] text-left shadow-2xl"
+      class="relative w-full max-w-5xl my-8 transform rounded-3xl bg-white dark:bg-[#1A1F2E] text-left shadow-2xl overflow-hidden"
     >
-      <!-- Header -->
-      <div
-        class="p-6 sm:p-8 border-b-2 border-[#E5E7EB] dark:border-[#2D3748] flex justify-between items-start gap-4"
-      >
-        <div class="flex items-start gap-4">
-          <div class="bg-[#F9FAFB] dark:bg-[#0F1419] p-3 rounded-2xl border-2 border-[#E5E7EB] dark:border-[#2D3748]">
-            <img
-              src="/images/projects/seijaku_list/seijaku.png"
-              alt="SeijakuList"
-              class="w-12 h-12 rounded-lg"
-            />
-          </div>
-          <div>
-            <h3 class="text-2xl sm:text-3xl font-bold text-[#1A1A1A] dark:text-[#E4E6EB] mb-2" id="modal-title">
-              SeijakuList
-            </h3>
-            <p class="text-sm text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="projects.seijaku.modal.subtitle">Aplicación Android de gestión de animes</p>
-          </div>
-        </div>
+      <!-- Hero Section with Feature Graphic -->
+      <div class="relative">
+        <img
+          src="/images/projects/seijaku_list/FeatureGraphic.png"
+          alt="SeijakuList Feature Graphic"
+          class="w-full h-48 sm:h-64 object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+        <!-- Close Button -->
         <button
           id="close-seijaku-modal"
           type="button"
-          class="text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1A1A1A] dark:hover:text-[#E4E6EB] transition-colors p-2 rounded-xl hover:bg-[#F9FAFB] dark:hover:bg-[#0F1419]"
+          class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors p-2 rounded-full"
         >
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"></path>
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
+
+        <!-- Logo and Title overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
+          <div class="flex items-end gap-3 sm:gap-4">
+            <img
+              src="/images/projects/seijaku_list/Logo_seijaku.png"
+              alt="SeijakuList"
+              class="w-14 h-14 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl shadow-xl border-2 border-white/20"
+            />
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-xl sm:text-3xl font-bold text-white" id="modal-title">
+                  SeijakuList
+                </h3>
+                <div class="inline-flex items-center gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 bg-[#10B981]/90 backdrop-blur-sm rounded-full">
+                  <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse"></div>
+                  <span class="text-[10px] sm:text-xs font-semibold text-white" data-i18n="projects.seijaku.status">En desarrollo</span>
+                </div>
+              </div>
+              <p class="text-white/80 text-xs sm:text-sm mt-1 truncate" data-i18n="projects.seijaku.modal.subtitle">Tu Compañero Definitivo para Anime y Manga</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Content -->
-      <div class="p-6 sm:p-8 space-y-8 max-h-[calc(100vh-16rem)] overflow-y-auto">
-        <!-- Resumen -->
-        <section class="bg-gradient-to-br from-[#F9FAFB] to-white dark:from-[#0F1419] dark:to-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-2xl p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <svg class="w-5 h-5 text-[#6366F1]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
-            <h4 class="text-lg font-bold text-[#1A1A1A] dark:text-[#E4E6EB]" data-i18n="projects.seijaku.modal.summary.title">
-              Resumen del Proyecto
-            </h4>
-          </div>
-          <p class="text-[#6B7280] dark:text-[#9CA3AF] leading-relaxed" id="modal-summary-desc">
-            SeijakuList es una aplicación móvil de gestión de historial de
-            animes desarrollada para la plataforma Android, enfocada en usar
-            arquitectura moderna (<span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold"
-              >Clean Architecture</span
-            > y <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">MVVM</span>). Utiliza la Jikan API para
-            datos y Room para la persistencia local de la lista del usuario.
+      <div class="p-6 sm:p-8 space-y-6 max-h-[calc(100vh-20rem)] overflow-y-auto">
+        <!-- Summary -->
+        <section>
+          <p class="text-[#6B7280] dark:text-[#9CA3AF] leading-relaxed text-base" id="modal-summary-desc">
+            ¿Sos fanático del anime y manga? ¿Perdés el control de qué episodios viste o qué series tenés pendientes?
+            <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">SeijakuList</span> es la solución perfecta para organizar,
+            gestionar y disfrutar tu colección de anime y manga de manera simple y moderna.
           </p>
         </section>
 
-        <!-- Tecnología y Arquitectura -->
+        <!-- Features Grid -->
         <section>
-          <div class="flex items-center gap-2 mb-4">
-            <svg class="w-5 h-5 text-[#6366F1]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
-            </svg>
-            <h4 class="text-lg font-bold text-[#1A1A1A] dark:text-[#E4E6EB]" data-i18n="projects.seijaku.modal.tech.title">
-              Tecnología y Arquitectura
-            </h4>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-2xl p-5">
-              <p class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB] mb-3 flex items-center gap-2">
-                <span class="w-2 h-2 bg-[#6366F1] rounded-full"></span>
-                <span data-i18n="projects.seijaku.modal.tech.key">Pila Tecnológica Clave</span>
-              </p>
-              <ul class="space-y-2 text-sm">
-                <li class="flex items-start gap-2 text-[#6B7280] dark:text-[#9CA3AF]">
-                  <span class="text-[#6366F1] mt-0.5">•</span>
-                  <span id="modal-tech-lang">Lenguaje y UI: <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Kotlin</span> y <span
-                    class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Jetpack Compose</span></span>
-                </li>
-                <li class="flex items-start gap-2 text-[#6B7280] dark:text-[#9CA3AF]">
-                  <span class="text-[#6366F1] mt-0.5">•</span>
-                  <span id="modal-tech-arch">Arquitectura: <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold"
-                    >Clean Architecture</span
-                  > y <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">MVVM</span></span>
-                </li>
-                <li class="flex items-start gap-2 text-[#6B7280] dark:text-[#9CA3AF]">
-                  <span class="text-[#6366F1] mt-0.5">•</span>
-                  <span id="modal-tech-di">Inyección de Dependencias: <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Hilt</span></span>
-                </li>
-              </ul>
+          <h4 class="text-sm font-semibold text-[#6B7280] dark:text-[#9CA3AF] mb-4 uppercase tracking-wider" data-i18n="projects.seijaku.modal.features.title">
+            Características Principales
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Feature 1 -->
+            <div class="flex gap-3 p-4 bg-[#F9FAFB] dark:bg-[#0F1419] rounded-xl">
+              <div class="flex-shrink-0 w-10 h-10 bg-[#6366F1]/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#1A1A1A] dark:text-[#E4E6EB] text-sm" data-i18n="projects.seijaku.modal.features.management.title">Gestión Completa</p>
+                <p class="text-xs text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="projects.seijaku.modal.features.management.desc">Organizá por estados: Viendo, Completado, Pendiente, En Espera</p>
+              </div>
             </div>
-            <div class="bg-white dark:bg-[#1A1F2E] border-2 border-[#E5E7EB] dark:border-[#2D3748] rounded-2xl p-5">
-              <p class="font-bold text-[#1A1A1A] dark:text-[#E4E6EB] mb-3 flex items-center gap-2">
-                <span class="w-2 h-2 bg-[#6366F1] rounded-full"></span>
-                <span data-i18n="projects.seijaku.modal.tech.data">Datos y Backend</span>
-              </p>
-              <ul class="space-y-2 text-sm">
-                <li class="flex items-start gap-2 text-[#6B7280] dark:text-[#9CA3AF]">
-                  <span class="text-[#6366F1] mt-0.5">•</span>
-                  <span id="modal-tech-api">API Externa: <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Jikan REST API</span></span>
-                </li>
-                <li class="flex items-start gap-2 text-[#6B7280] dark:text-[#9CA3AF]">
-                  <span class="text-[#6366F1] mt-0.5">•</span>
-                  <span id="modal-tech-db">Persistencia Local: <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Room</span> (SQLite)</span>
-                </li>
-                <li class="flex items-start gap-2 text-[#6B7280] dark:text-[#9CA3AF]">
-                  <span class="text-[#6366F1] mt-0.5">•</span>
-                  <span id="modal-tech-async">Asincronía: <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Coroutines</span> y <span
-                    class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Retrofit</span></span>
-                </li>
-                <li class="flex items-start gap-2 text-[#6B7280] dark:text-[#9CA3AF]">
-                  <span class="text-[#6366F1] mt-0.5">•</span>
-                  <span id="modal-tech-baas">BaaS: <span class="text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold">Firebase</span> (Auth, Storage, Firestore, Crashlytics)</span>
-                </li>
-              </ul>
+            <!-- Feature 2 -->
+            <div class="flex gap-3 p-4 bg-[#F9FAFB] dark:bg-[#0F1419] rounded-xl">
+              <div class="flex-shrink-0 w-10 h-10 bg-[#10B981]/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#1A1A1A] dark:text-[#E4E6EB] text-sm" data-i18n="projects.seijaku.modal.features.search.title">Búsqueda Intuitiva</p>
+                <p class="text-xs text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="projects.seijaku.modal.features.search.desc">Buscá animes, mangas, personajes y estudios fácilmente</p>
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="flex gap-3 p-4 bg-[#F9FAFB] dark:bg-[#0F1419] rounded-xl">
+              <div class="flex-shrink-0 w-10 h-10 bg-[#F59E0B]/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#F59E0B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#1A1A1A] dark:text-[#E4E6EB] text-sm" data-i18n="projects.seijaku.modal.features.cloud.title">Sincronización Cloud</p>
+                <p class="text-xs text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="projects.seijaku.modal.features.cloud.desc">Tu progreso guardado y sincronizado entre dispositivos</p>
+              </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="flex gap-3 p-4 bg-[#F9FAFB] dark:bg-[#0F1419] rounded-xl">
+              <div class="flex-shrink-0 w-10 h-10 bg-[#EC4899]/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#EC4899]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[#1A1A1A] dark:text-[#E4E6EB] text-sm" data-i18n="projects.seijaku.modal.features.achievements.title">Sistema de Logros</p>
+                <p class="text-xs text-[#6B7280] dark:text-[#9CA3AF]" data-i18n="projects.seijaku.modal.features.achievements.desc">Desbloqueá logros y demostrá tu pasión por el anime</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- Galería -->
+        <!-- Tech Stack -->
         <section>
-          <div class="flex items-center gap-2 mb-4">
-            <svg class="w-5 h-5 text-[#6366F1]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-            </svg>
-            <h4 class="text-lg font-bold text-[#1A1A1A] dark:text-[#E4E6EB]" data-i18n="projects.seijaku.modal.gallery.title">
-              Capturas de Pantalla
-            </h4>
+          <h4 class="text-sm font-semibold text-[#6B7280] dark:text-[#9CA3AF] mb-3 uppercase tracking-wider" data-i18n="projects.seijaku.modal.tech.title">
+            Stack Tecnológico
+          </h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Kotlin</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Jetpack Compose</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">MVVM</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Clean Architecture</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Room</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Retrofit</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Hilt</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Coroutines</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Firebase</span>
+            <span class="px-3 py-1.5 bg-[#6366F1]/10 text-[#6366F1] dark:text-[#818CF8] text-sm rounded-lg font-medium">Jikan API</span>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div
-              class="rounded-xl overflow-hidden border-2 border-[#E5E7EB] dark:border-[#2D3748] shadow-md hover:border-[#6366F1] transition-all hover:scale-105"
-            >
-              <img
-                src="/images/projects/seijaku_list/seijaku-home.png"
-                alt="Captura 1: Pantalla Principal de SeijakuList"
-                class="w-full h-auto object-cover"
-              />
-              <p class="text-center text-xs p-2 bg-[#F9FAFB] dark:bg-[#0F1419] text-[#6B7280] dark:text-[#9CA3AF] font-medium" data-i18n="projects.seijaku.modal.gallery.home">
-                Home
-              </p>
+        </section>
+
+        <!-- Gallery -->
+        <section>
+          <h4 class="text-sm font-semibold text-[#6B7280] dark:text-[#9CA3AF] mb-3 uppercase tracking-wider" data-i18n="projects.seijaku.modal.gallery.title">
+            Capturas de Pantalla
+          </h4>
+          <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-2 sm:gap-3">
+            <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <img src="/images/projects/seijaku_list/Mockup1.png" alt="SeijakuList Mockup 1" class="w-full h-auto object-cover" />
             </div>
-            <div
-              class="rounded-xl overflow-hidden border-2 border-[#E5E7EB] dark:border-[#2D3748] shadow-md hover:border-[#6366F1] transition-all hover:scale-105"
-            >
-              <img
-                src="/images/projects/seijaku_list/seijaku-detail-anime.png"
-                alt="Captura 2: Detalle de Anime en SeijakuList"
-                class="w-full h-auto object-cover"
-              />
-              <p class="text-center text-xs p-2 bg-[#F9FAFB] dark:bg-[#0F1419] text-[#6B7280] dark:text-[#9CA3AF] font-medium" data-i18n="projects.seijaku.modal.gallery.detail">
-                Detalle
-              </p>
+            <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <img src="/images/projects/seijaku_list/Mockup2.png" alt="SeijakuList Mockup 2" class="w-full h-auto object-cover" />
             </div>
-            <div
-              class="rounded-xl overflow-hidden border-2 border-[#E5E7EB] dark:border-[#2D3748] shadow-md hover:border-[#6366F1] transition-all hover:scale-105"
-            >
-              <img
-                src="/images/projects/seijaku_list/seijaku-my-animes.png"
-                alt="Captura 3: Lista Personal de Usuario"
-                class="w-full h-auto object-cover"
-              />
-              <p class="text-center text-xs p-2 bg-[#F9FAFB] dark:bg-[#0F1419] text-[#6B7280] dark:text-[#9CA3AF] font-medium" data-i18n="projects.seijaku.modal.gallery.mylist">
-                Mis Animes
-              </p>
+            <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <img src="/images/projects/seijaku_list/Mockup3.png" alt="SeijakuList Mockup 3" class="w-full h-auto object-cover" />
             </div>
-            <div
-              class="rounded-xl overflow-hidden border-2 border-[#E5E7EB] dark:border-[#2D3748] shadow-md hover:border-[#6366F1] transition-all hover:scale-105"
-            >
-              <img
-                src="/images/projects/seijaku_list/seijaku-search.png"
-                alt="Captura 4: Vista de Ajustes o Perfil"
-                class="w-full h-auto object-cover"
-              />
-              <p class="text-center text-xs p-2 bg-[#F9FAFB] dark:bg-[#0F1419] text-[#6B7280] dark:text-[#9CA3AF] font-medium" data-i18n="projects.seijaku.modal.gallery.search">
-                Búsqueda
-              </p>
+            <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <img src="/images/projects/seijaku_list/Mockup4.png" alt="SeijakuList Mockup 4" class="w-full h-auto object-cover" />
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <img src="/images/projects/seijaku_list/Mockup5.png" alt="SeijakuList Mockup 5" class="w-full h-auto object-cover" />
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <img src="/images/projects/seijaku_list/Mockup6.png" alt="SeijakuList Mockup 6" class="w-full h-auto object-cover" />
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <img src="/images/projects/seijaku_list/Mockup7.png" alt="SeijakuList Mockup 7" class="w-full h-auto object-cover" />
             </div>
           </div>
         </section>
       </div>
 
       <!-- Footer -->
-      <div
-        class="p-6 sm:p-8 border-t-2 border-[#E5E7EB] dark:border-[#2D3748] flex flex-wrap gap-3 justify-end bg-[#FAFAFA] dark:bg-[#0F1419]"
-      >
-        <a
-          href="https://github.com/Pedro-kt/seijaku-list"
-          target="_blank"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-[#6366F1] text-white font-semibold text-sm rounded-xl hover:bg-[#4F46E5] transition-all shadow-lg shadow-[#6366F1]/30 hover:shadow-xl hover:shadow-[#6366F1]/40 hover:-translate-y-0.5"
-        >
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-            ></path>
-          </svg>
-          <span data-i18n="projects.seijaku.modal.btn.github">Ver en GitHub</span>
-        </a>
+      <div class="p-4 sm:p-8 border-t border-[#E5E7EB] dark:border-[#2D3748] flex flex-wrap gap-3 justify-end items-center bg-[#F9FAFB] dark:bg-[#0F1419]">
+        <div class="flex flex-wrap gap-2 sm:gap-3">
+          <a
+            href="https://github.com/Pedro-kt/seijaku-list"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1A1A1A] dark:bg-white text-white dark:text-[#1A1A1A] font-semibold text-sm rounded-xl hover:opacity-90 transition-all hover:-translate-y-0.5"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+            </svg>
+            GitHub
+          </a>
 
-        <a
-          href="#"
-          target="_blank"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-[#1A1F2E] text-[#1A1A1A] dark:text-[#E4E6EB] font-semibold text-sm rounded-xl border-2 border-[#E5E7EB] dark:border-[#2D3748] hover:border-[#6366F1] transition-all hover:-translate-y-0.5"
-        >
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-            ></path>
-          </svg>
-          <span data-i18n="projects.seijaku.modal.btn.demo">Ver Demo</span>
-        </a>
+          <a
+            href="#"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#6366F1] text-white font-semibold text-sm rounded-xl hover:bg-[#4F46E5] transition-all shadow-lg shadow-[#6366F1]/25 hover:-translate-y-0.5"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+            </svg>
+            <span data-i18n="projects.seijaku.modal.btn.demo">Ver Demo</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -232,13 +204,11 @@
 <script>
   import { translations, type Language } from '../i18n/translations';
 
-  // Get current language from localStorage
   function getCurrentLanguage(): Language {
     const saved = localStorage.getItem('language');
     return (saved === 'en' || saved === 'es' || saved === 'et') ? saved : 'es';
   }
 
-  // Helper to create styled text with placeholders
   function renderWithPlaceholders(text: string, replacements: Record<string, string>) {
     let result = text;
     Object.entries(replacements).forEach(([key, value]) => {
@@ -248,84 +218,20 @@
     return result;
   }
 
-  // Update modal content with translations
   function updateModalTranslations() {
     const lang = getCurrentLanguage();
 
-    // Summary description
     const summaryDesc = document.getElementById('modal-summary-desc');
     if (summaryDesc) {
       const text = translations[lang]['projects.seijaku.modal.summary.description'];
-      summaryDesc.innerHTML = renderWithPlaceholders(text, {
-        clean: 'Clean Architecture',
-        mvvm: 'MVVM'
-      });
-    }
-
-    // Tech items with placeholders
-    const techLang = document.getElementById('modal-tech-lang');
-    if (techLang) {
-      const text = translations[lang]['projects.seijaku.modal.tech.lang'];
-      techLang.innerHTML = renderWithPlaceholders(text, {
-        kotlin: 'Kotlin',
-        compose: 'Jetpack Compose'
-      });
-    }
-
-    const techArch = document.getElementById('modal-tech-arch');
-    if (techArch) {
-      const text = translations[lang]['projects.seijaku.modal.tech.arch'];
-      techArch.innerHTML = renderWithPlaceholders(text, {
-        clean: 'Clean Architecture',
-        mvvm: 'MVVM'
-      });
-    }
-
-    const techDi = document.getElementById('modal-tech-di');
-    if (techDi) {
-      const text = translations[lang]['projects.seijaku.modal.tech.di'];
-      techDi.innerHTML = renderWithPlaceholders(text, {
-        hilt: 'Hilt'
-      });
-    }
-
-    const techApi = document.getElementById('modal-tech-api');
-    if (techApi) {
-      const text = translations[lang]['projects.seijaku.modal.tech.api'];
-      techApi.innerHTML = renderWithPlaceholders(text, {
-        jikan: 'Jikan REST API'
-      });
-    }
-
-    const techDb = document.getElementById('modal-tech-db');
-    if (techDb) {
-      const text = translations[lang]['projects.seijaku.modal.tech.db'];
-      techDb.innerHTML = renderWithPlaceholders(text, {
-        room: 'Room'
-      });
-    }
-
-    const techAsync = document.getElementById('modal-tech-async');
-    if (techAsync) {
-      const text = translations[lang]['projects.seijaku.modal.tech.async'];
-      techAsync.innerHTML = renderWithPlaceholders(text, {
-        coroutines: 'Coroutines',
-        retrofit: 'Retrofit'
-      });
-    }
-
-    const techBaas = document.getElementById('modal-tech-baas');
-    if (techBaas) {
-      const text = translations[lang]['projects.seijaku.modal.tech.baas'];
-      techBaas.innerHTML = renderWithPlaceholders(text, {
-        firebase: 'Firebase'
-      });
+      if (text) {
+        summaryDesc.innerHTML = renderWithPlaceholders(text, {
+          app: 'SeijakuList'
+        });
+      }
     }
   }
 
-  // Initialize
   updateModalTranslations();
-
-  // Listen for language changes
   window.addEventListener('languagechange', updateModalTranslations);
 </script>
