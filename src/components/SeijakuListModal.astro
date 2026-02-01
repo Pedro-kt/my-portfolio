@@ -226,7 +226,9 @@
       const text = translations[lang]['projects.seijaku.modal.summary.description'];
       if (text) {
         summaryDesc.innerHTML = renderWithPlaceholders(text, {
-          app: 'SeijakuList'
+          app: 'SeijakuList',
+          clean: 'Clean Architecture',
+          mvvm: 'MVVM'
         });
       }
     }
